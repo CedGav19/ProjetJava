@@ -3,7 +3,6 @@ import javax.swing.*;
 public class Home {
     private JScrollBar scrollBar1;
     private JScrollBar scrollBar3;
-    private JList list1;
     private JCheckBox perdre5KgCheckBox;
     private JCheckBox courirUneHeureCheckBox;
     private JScrollBar scrollBar2;
@@ -14,4 +13,5 @@ public class Home {
     private JScrollBar scrollBar4;
     private JCheckBox a100AbdosCheckBox;
     private JButton pasFaitButton;
+    private JList list1;
 }
