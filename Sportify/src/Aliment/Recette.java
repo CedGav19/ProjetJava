@@ -2,7 +2,9 @@ package Aliment;
 
 
 import Exercices.Exercice;
+import Exercices.ExerciceForce;
 import Exercices.Seance;
+import Objectifs.ObjectifForce;
 
 import java.util.ArrayList;
 
@@ -12,6 +14,11 @@ public class Recette {
 
     public ArrayList<Aliments> getVecAliments() {
         return vecAliments;
+    }
+
+    public Recette()
+    {
+        vecAliments =new ArrayList<Aliments>() ;
     }
 
     public String  AfficherAliments()
@@ -48,7 +55,10 @@ public class Recette {
         {
             tmp +=vecAliments.get(i).getScore();
         }
+        if(vecAliments.size()!=0)
         return tmp/ vecAliments.size() ;
+        else
+            return tmp;
     }
     public int sommeProteine()
     {
@@ -69,7 +79,6 @@ public class Recette {
         }
         return tmp ;
     }
-
     public boolean Equals(Recette obj)
     {
         if(vecAliments.size()==obj.vecAliments.size())
@@ -87,6 +96,48 @@ public class Recette {
         }
         else
             return false ;
+    }
+
+    @Override
+    public String toString() {
+        return "Recette{" +
+                "vecAliments=" + vecAliments +
+                '}';
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("--Creation d'un objet grace au constructeur par defaut");
+        Recette O1 = new Recette();
+        System.out.println(O1); // appele toString pour fonctionner
+        System.out.println( "score : "+O1.scoreMoyenne());
+        System.out.println("kcal : "+O1.sommeKcal());
+        System.out.println("prot : "+O1.sommeProteine());
+        System.out.println("--Remplissage du vecetur de l'objet");
+        System.out.println("-avant remplissage");
+        Recette O2 = new Recette();
+        System.out.println(O2); // appele toString pour fonctionner
+        System.out.println("score :"+O2.scoreMoyenne());
+        System.out.println("kcal : "+O2.sommeKcal());
+        System.out.println("prot:"+ O2.sommeProteine());
+        System.out.println("-apres remplissage");
+        O2.ajouterAliment(new Aliments("carotte","legume",1,2,3));
+        O2.ajouterAliment(new Aliments("toast","glucide",12,22,1));
+        System.out.println("score : "+O2.scoreMoyenne());
+        System.out.println("kcal : "+O2.sommeKcal());
+        System.out.println("prot : "+O2.sommeProteine());
+        System.out.println(O2);
+        System.out.println("--creation de 03  + insertion des nom  des aliments ");
+        Recette O3 = new Recette();
+        O3.ajouterAliment(new Aliments("carotte","legume",1,0,3));
+        O3.ajouterAliment(new Aliments("toast","glucide",2,100,1));
+        System.out.println(O3);
+        System.out.println("--utilisation du Equals");
+        System.out.println(" entre objet 2 et 3 : "+O2.Equals(O3));
+        System.out.println("entre objet 2 et 1 : " +O2.Equals(O1));
+        System.out.println("--utilisation de retirer");
+        O3.retirerAliment("carotte");
+        System.out.println(O3);
 
     }
 

@@ -1,12 +1,33 @@
 package Objectifs;
 
+import Exercices.Exercice;
+import Exercices.ExerciceForce;
+
 public class Objectif {
-    private boolean accompli ;
+    //private boolean accompli ;     on fait 2 vecteur dans notre singleton un accompli et l'autre en cours
     private String dateSouhaite ;
 
-    public void setAccompli(boolean accompli) {
-        this.accompli = accompli;
+    private String nom ;
+
+    public Objectif()
+    {
+        setNom("aucun");
+        setDateSouhaite("aucune");
     }
+    public Objectif(String n , String d)
+    {
+        setDateSouhaite(d);
+        setNom(n);
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
     public void setDateSouhaite(String dateSouhaite) {
         this.dateSouhaite = dateSouhaite;
     }
@@ -14,16 +35,26 @@ public class Objectif {
     public String getDateSouhaite() {
         return dateSouhaite;
     }
-    public boolean getAccompli()
-    {
-        return accompli;
-    }
 
     @Override
     public String toString() {
         return "Objectif{" +
-                "accompli=" + accompli +
+                "nom =" + getNom() +
                 ", dateSouhaite='" + dateSouhaite + '\'' +
                 '}';
     }
+
+    public boolean Equals(Objectif obj)
+    {
+        if(this.getNom() == obj.getNom())
+            return true ;
+        else
+            return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Objectif est une classe abstraite ");
+
+    }
+
 }

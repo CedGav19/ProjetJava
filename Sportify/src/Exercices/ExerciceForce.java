@@ -38,4 +38,18 @@ public class ExerciceForce extends Exercice {
             return false;
     }
 
+    public static void main(String[] args) {
+        System.out.println("--Creation d'un objet grace au constructeur par defaut");
+        ExerciceForce O1 = new ExerciceForce();
+        System.out.println(O1); // appele toString pour fonctionner
+        System.out.println("--Creation d'un objet grace precis");
+        ExerciceForce O2 = new ExerciceForce("developpé couché","pectoraux",3,0,true);
+        System.out.println(O2);
+        ExerciceForce O3 = new ExerciceForce("developpé couché","pectoraux",5,20, false) ;
+        System.out.println(O3);
+        System.out.println("--utilisation du Equals");
+        System.out.println(O2.Equals(O3));
+        System.out.println(O2.Equals(O1));
+    }
+
 }

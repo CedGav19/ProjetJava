@@ -19,7 +19,7 @@ public class Exercice {
     }
 
     public void setScore(int score) {
-       if(score <=5 && score <= 0 ) this.score = score;
+       if(score <=5 && score >= 0 ) this.score = score;
     }
 
     public void setTempsEstime(int tempsEstime) {
@@ -82,5 +82,20 @@ public class Exercice {
             return true ;
         else
             return false;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("--Creation d'un objet grace au constructeur par defaut");
+        Exercice O1 = new Exercice();
+        System.out.println(O1); // appele toString pour fonctionner
+        System.out.println("--Creation d'un objet grace precis");
+        Exercice O2 = new Exercice("développé couché","pectoraux");
+        System.out.println(O2);
+        Exercice O3 = new Exercice("développé couché","pectoraux",5,20) ;
+        System.out.println(O3);
+        System.out.println("--utilisation du Equals");
+        System.out.println(O2.Equals(O3));
+        System.out.println(O2.Equals(O1));
     }
 }

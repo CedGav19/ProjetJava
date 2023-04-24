@@ -1,6 +1,7 @@
 package Exercices;
 
 import Aliment.Aliments;
+import Aliment.Recette;
 
 import java.util.ArrayList;
 
@@ -10,6 +11,11 @@ public class Seance {
 
     public ArrayList<Exercice> getVecExercices() {
         return vecExercices;
+    }
+
+    public Seance()
+    {
+        vecExercices=new ArrayList<Exercice>();
     }
 
     public String  AfficherExercices()
@@ -40,14 +46,15 @@ public class Seance {
 
     public ArrayList<String> vecMuscle()
     {
-        ArrayList<String> vtmp = null;
-        vtmp.add(vecExercices.get(0).getMuscle());
-        for(int i = 0 ; i < vecExercices.size(); i++)
+        ArrayList<String> vtmp = new ArrayList<String>();
+        if(vecExercices.size()>0)
         {
-                for(int j =0 ; j<vtmp.size();i++)
-                {
-                    if(vecExercices.get(i).getMuscle()!= vtmp.get(i))  vtmp.add(vecExercices.get(i).getMuscle());
+            vtmp.add(vecExercices.get(0).getMuscle());
+            for (int i = 0; i < vecExercices.size(); i++) {
+                for (int j = 0; j < vtmp.size(); j++) {
+                    if (vecExercices.get(i).getMuscle() != vtmp.get(j)) vtmp.add(vecExercices.get(i).getMuscle());
                 }
+            }
         }
         return vtmp ;
     }
@@ -79,6 +86,46 @@ public class Seance {
         }
         else
             return false ;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Seance{" +
+                "vecExercices=" + vecExercices +
+                '}';
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("--Creation d'un objet grace au constructeur par defaut");
+        Seance O1 = new Seance();
+        System.out.println(O1); // appele toString pour fonctionner
+        System.out.println( "muscles : "+O1.vecMuscle());
+        System.out.println("tps : "+O1.tempsTotal());
+        System.out.println("--Remplissage du vecteur de l'objet");
+        System.out.println("-avant remplissage");
+        Seance O2 = new Seance();
+        System.out.println(O2); // appele toString pour fonctionner
+        System.out.println("muscles :"+O2.vecMuscle());
+        System.out.println("tps : "+O2.tempsTotal());
+        System.out.println("-apres remplissage");
+        O2.ajouterExercice(new ExerciceForce("dev couch","pec",4,20,true));
+        O2.ajouterExercice(new ExerciceForce("elev lat","epaules",5,20,false));
+        System.out.println("muscles : "+O2.vecMuscle());
+        System.out.println("tps : "+O2.tempsTotal());
+        System.out.println(O2);
+        System.out.println("--creation de 03  + insertion des nom  des exercices ");
+        Seance O3 = new Seance();
+        O3.ajouterExercice(new ExerciceForce("dev couch","pec",1,20,true));
+        O3.ajouterExercice(new ExerciceForce("elev lat","dos",5,40,false));
+        System.out.println(O3);
+        System.out.println("--utilisation du Equals");
+        System.out.println(" entre objet 2 et 3 : "+O2.Equals(O3));
+        System.out.println("entre objet 2 et 1 : " +O2.Equals(O1));
+        System.out.println("--utilisation de retirer");
+        O3.retirerExercice("elev lat");
+        System.out.println(O3);
 
     }
 
