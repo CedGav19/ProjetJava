@@ -1,19 +1,13 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PopExercices extends JDialog {
+public class PopAjoutPlatMange extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JSpinner spinner1;
-    private JTextField textField1;
-    private JRadioButton tempsOptionnelRadioButton;
-    private JTextField textField2;
-    private JRadioButton forceRadioButton;
-    private JRadioButton cardioRadioButton;
-    private JTextField textField3;
+    private JComboBox comboBox1;
 
-    public PopExercices() {
+    public PopAjoutPlatMange() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -57,7 +51,7 @@ public class PopExercices extends JDialog {
     }
 
     public static void main(String[] args) {
-        PopExercices dialog = new PopExercices();
+        PopAjoutPlatMange dialog = new PopAjoutPlatMange();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

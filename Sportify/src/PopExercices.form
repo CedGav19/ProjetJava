@@ -68,7 +68,7 @@
             </properties>
             <border type="none" title="Ajout exercice :"/>
             <children>
-              <grid id="5a85" layout-manager="GridLayoutManager" row-count="5" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="5a85" layout-manager="GridLayoutManager" row-count="9" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -82,7 +82,7 @@
                 <children>
                   <component id="4a2" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Nombre de séries"/>
@@ -110,7 +110,7 @@
                   </component>
                   <component id="40c29" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Poids:"/>
@@ -118,7 +118,7 @@
                   </component>
                   <component id="c48cf" class="javax.swing.JRadioButton" binding="tempsOptionnelRadioButton" default-binding="true">
                     <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Temps(optionnel):"/>
@@ -126,7 +126,7 @@
                   </component>
                   <component id="3cdc5" class="javax.swing.JTextField" binding="textField2" default-binding="true">
                     <constraints>
-                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <minimum-size width="40" height="-1"/>
                         <preferred-size width="40" height="-1"/>
                         <maximum-size width="40" height="-1"/>
@@ -136,7 +136,7 @@
                   </component>
                   <component id="6f9c0" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Min"/>
@@ -144,7 +144,7 @@
                   </component>
                   <component id="d33d4" class="javax.swing.JTextField" default-binding="true">
                     <constraints>
-                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <minimum-size width="40" height="-1"/>
                         <preferred-size width="40" height="-1"/>
                         <maximum-size width="40" height="-1"/>
@@ -154,7 +154,7 @@
                   </component>
                   <component id="71ea5" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="sec"/>
@@ -162,7 +162,7 @@
                   </component>
                   <component id="c6dab" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
                     <constraints>
-                      <grid row="2" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="4" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="50" height="-1"/>
                         <preferred-size width="50" height="-1"/>
                         <maximum-size width="50" height="-1"/>
@@ -172,10 +172,50 @@
                   </component>
                   <component id="a91d7" class="javax.swing.JSpinner" default-binding="true">
                     <constraints>
-                      <grid row="3" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="5" column="2" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="50" height="-1"/>
                         <preferred-size width="50" height="-1"/>
                         <maximum-size width="50" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="61c23" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Type"/>
+                    </properties>
+                  </component>
+                  <component id="8e8df" class="javax.swing.JRadioButton" binding="forceRadioButton" default-binding="true">
+                    <constraints>
+                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Force"/>
+                    </properties>
+                  </component>
+                  <component id="2c78d" class="javax.swing.JRadioButton" binding="cardioRadioButton" default-binding="true">
+                    <constraints>
+                      <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Cardio"/>
+                    </properties>
+                  </component>
+                  <component id="fe92d" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Type de muscle"/>
+                    </properties>
+                  </component>
+                  <component id="a7c81" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                    <constraints>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
                       </grid>
                     </constraints>
                     <properties/>
