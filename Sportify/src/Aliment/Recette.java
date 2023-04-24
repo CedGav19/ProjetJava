@@ -79,6 +79,10 @@ public class Recette {
         }
         return tmp ;
     }
+    public int nbaliments()
+    {
+        return vecAliments.size();
+    }
     public boolean Equals(Recette obj)
     {
         if(vecAliments.size()==obj.vecAliments.size())

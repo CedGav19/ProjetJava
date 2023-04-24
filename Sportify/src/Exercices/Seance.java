@@ -69,6 +69,11 @@ public class Seance {
         return tmp ;
     }
 
+    public int nbExercice()
+    {
+        return vecExercices.size();
+    }
+
     public boolean Equals(Seance obj)
     {
         if(vecExercices.size()==obj.vecExercices.size())

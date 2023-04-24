@@ -2,7 +2,7 @@ package Exercices;
 
 import Aliment.Aliments;
 
-public class Exercice {
+public  class Exercice {
 
     private String muscle;
     private int tempsEstime ;

@@ -84,6 +84,7 @@ public class Aliments {
     }
 
 
+
     public static void main(String[] args) {
 
         System.out.println("--Creation d'un objet grace au constructeur par defaut");

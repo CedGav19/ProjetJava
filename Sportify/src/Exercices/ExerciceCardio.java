@@ -16,6 +16,7 @@ public class ExerciceCardio extends Exercice {
     public ExerciceCardio()
     {
         super();
+        setDistance(0);
     }
     public ExerciceCardio(String n , String m , int sc , int tps , int d )
     {

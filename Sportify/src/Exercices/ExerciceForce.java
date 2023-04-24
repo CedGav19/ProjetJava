@@ -15,6 +15,7 @@ public class ExerciceForce extends Exercice {
     public ExerciceForce()
     {
         super();
+        setPolyarticulaire(false);
     }
     public ExerciceForce(String n , String m , int sc , int tps , boolean poly )
     {
