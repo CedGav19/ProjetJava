@@ -1,6 +1,8 @@
 import Aliment.Recette;
-import Exercices.Sceance;
+import Exercices.Exercice;
+import Exercices.Seance;
 import Objectifs.Objectif;
+import java.util.ArrayList;
 
 
 // sert de singleton
@@ -8,14 +10,14 @@ public class Utilisateur {
     private String nom ;
     private String prenom ;
     private String date ; // mettre en type date
-
-    private Sceance mesSceance[] ;
-    private Recette mesRecette[] ;
-    private Objectif mesObjectifsReussis[] ;
-    private Objectif mesObjectif[];
-
     private float poidsActuel ;
     private int tailleActuel ;
+
+    ArrayList<Seance> mesSeance ;
+    ArrayList<Recette> mesRecette ;
+    ArrayList<Objectif> mesObjectifsReussis ;
+    ArrayList<Objectif> mesObjectifs ;
+
 
     public void setNom(String nom) {
         this.nom = nom;
@@ -76,6 +78,12 @@ public class Utilisateur {
         setTailleActuel(t);
     }
 
+
+    public void ajouterSceance(Seance s)
+    {
+        // faire les ajout dans les conteneur aussi
+        mesSeance.add(s);
+    }
     @Override
     public String toString() {
         return "Utilisateur{" +
@@ -85,5 +93,12 @@ public class Utilisateur {
                 ", poidsActuel=" + getPoidsActuel() +
                 ", tailleActuel=" + getTailleActuel() +
                 '}';
+    }
+    public boolean Equals(Utilisateur obj) // un peu illogique car notre utilisateur est notre singleton
+    {                                       // mais peut etre util si on cree plusieurs utilisateurs
+        if(this.nom == obj.nom)
+            return true ;
+        else
+            return false;
     }
 }

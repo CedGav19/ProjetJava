@@ -30,4 +30,12 @@ public class ExerciceForce extends Exercice {
                 "polyarticulaire=" + polyarticulaire +
                 '}';
     }
+    public boolean Equals(Exercice obj)
+    {
+        if(this.getNom() == obj.getNom())
+            return true ;
+        else
+            return false;
+    }
+
 }

@@ -44,6 +44,10 @@ public class Aliments {
         return kcal;
     }
 
+    public int getScore() {
+        return score;
+    }
+
     @Override
     public String toString() {
         return "Aliment.Aliments{" +
@@ -52,5 +56,18 @@ public class Aliments {
                 ", type='" + type + '\'' +
                 ", nom='" + nom + '\'' +
                 '}';
+    }
+
+    public boolean Equals(Aliments obj)
+    {
+        if(this.nom == obj.nom)
+            return true ;
+        else
+            return false;
+    }
+
+
+    public static void main(String[] args) {
+        
     }
 }

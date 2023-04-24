@@ -1,5 +1,7 @@
 package Exercices;
 
+import Aliment.Aliments;
+
 public class ExerciceCardio extends Exercice {
     private int distance ;
 
@@ -28,5 +30,12 @@ public class ExerciceCardio extends Exercice {
                         +"Exercices.ExerciceForce{" +
                         "polyarticulaire=" + getDistance() +
                         '}';
+    }
+    public boolean Equals(Exercice obj)
+    {
+        if(this.getNom() == obj.getNom())
+            return true ;
+        else
+            return false;
     }
 }

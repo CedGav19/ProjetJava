@@ -1,5 +1,7 @@
 package Exercices;
 
+import Aliment.Aliments;
+
 public class Exercice {
 
     private String muscle;
@@ -72,5 +74,13 @@ public class Exercice {
                 ", nom='" + getNom() + '\'' +
                 ", score=" + getScore() +
                 '}';
+    }
+
+    public boolean Equals(Exercice obj)
+    {
+        if(this.nom == obj.nom)
+            return true ;
+        else
+            return false;
     }
 }
