@@ -2,7 +2,7 @@ package Exercices;
 
 import Aliment.Aliments;
 
-public  class Exercice {
+public  abstract class Exercice {
 
     private String muscle;
     private int tempsEstime ;
@@ -65,8 +65,8 @@ public  class Exercice {
         setMuscle(m);
     }
 
-
-    @Override
+    // jamaois instanciable donc inutile ( sauf pour lest test )
+    /*@Override
     public String toString() {
         return "Exercices.Exercice{" +
                 "muscle='" + getMuscle() + '\'' +
@@ -82,9 +82,9 @@ public  class Exercice {
             return true ;
         else
             return false;
-    }
+    } */
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         System.out.println("--Creation d'un objet grace au constructeur par defaut");
         Exercice O1 = new Exercice();
@@ -97,5 +97,5 @@ public  class Exercice {
         System.out.println("--utilisation du Equals");
         System.out.println(O2.Equals(O3));
         System.out.println(O2.Equals(O1));
-    }
+    }*/
 }

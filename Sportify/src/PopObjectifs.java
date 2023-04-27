@@ -6,6 +6,7 @@ public class PopObjectifs extends JDialog {
     private JButton buttonOK;
     private JButton buttonCancel;
     private JTextField textField1;
+    private JFormattedTextField formattedTextField1;
 
     public PopObjectifs() {
         setContentPane(contentPane);

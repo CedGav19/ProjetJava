@@ -84,6 +84,28 @@ public class Utilisateur {
         // faire les ajout dans les conteneur aussi
         mesSeance.add(s);
     }
+    public void ajouterRecette(Recette r )
+    {
+        mesRecette.add(r);
+    }
+    public void ajouterObjectifReussis(Objectif o )
+    {
+        mesObjectifsReussis.add(o);
+    }
+    public void ajouterObjectif(Objectif o )
+    {
+        mesObjectifs.add(o);
+    }
+
+    public void validerObjectif(Objectif O )
+    {
+       if ( mesObjectifs.contains(O))
+       {
+           mesObjectifs.remove(O);
+           mesObjectifsReussis.add(O);
+       }
+    }
+
     @Override
     public String toString() {
         return "Utilisateur{" +

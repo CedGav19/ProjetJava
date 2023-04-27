@@ -3,7 +3,7 @@ package Objectifs;
 import Exercices.Exercice;
 import Exercices.ExerciceForce;
 
-public class Objectif {
+public  abstract class Objectif {
     //private boolean accompli ;     on fait 2 vecteur dans notre singleton un accompli et l'autre en cours
     private String dateSouhaite ;
 
@@ -36,6 +36,7 @@ public class Objectif {
         return dateSouhaite;
     }
 
+
     @Override
     public String toString() {
         return "Objectif{" +
@@ -52,9 +53,19 @@ public class Objectif {
             return false;
     }
 
-    public static void main(String[] args) {
+  /*  public static void main(String[] args) {
         System.out.println("Objectif est une classe abstraite ");
-
-    }
+        System.out.println("--Creation d'un objet grace au constructeur par defaut");
+        Objectif O1 = new Objectif();
+        System.out.println(O1); // appele toString pour fonctionner
+        System.out.println("--Creation d'un objet grace precis");
+        Exercice O2 = new Objectif("objectif 1 " , "12/03/23");
+        System.out.println(O2);
+        Exercice O3 = new Objectif("objectif 2 " , "11/07/23");
+        System.out.println(O3);
+        System.out.println("--utilisation du Equals");
+        System.out.println(O2.Equals(O3));
+        System.out.println(O2.Equals(O1));
+    } */
 
 }
