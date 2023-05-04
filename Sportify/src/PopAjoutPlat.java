@@ -7,9 +7,12 @@ public class PopAjoutPlat extends JDialog {
     private JButton buttonCancel;
     private JSpinner spinner1;
     private JTextField textField1;
-    private JScrollBar scrollBar1;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
+    private JRadioButton radioButton4;
+    private JRadioButton radioButton5;
+    private JRadioButton radioButton6;
 
     public PopAjoutPlat() {
         setContentPane(contentPane);

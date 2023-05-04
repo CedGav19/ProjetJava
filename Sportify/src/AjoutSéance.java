@@ -9,9 +9,8 @@ public class AjoutSéance extends JDialog {
     private JTextField textField2;
     private JSpinner spinner1;
     private JTextField textField1;
-    private JScrollBar scrollBar1;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JCheckBox courseCheckBox;
+    private JCheckBox courirUneHeureCheckBox;
 
     public AjoutSéance() {
         setContentPane(contentPane);
