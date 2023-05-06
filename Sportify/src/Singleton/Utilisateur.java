@@ -3,6 +3,8 @@ import Aliment.Aliments;
 import Aliment.Recette;
 import Exercices.Seance;
 import Objectifs.Objectif;
+import java.io.FileReader;
+import java.io.IOException;
 
 import java.util.ArrayList;
 
@@ -79,6 +81,8 @@ public class Utilisateur {
         setDate("inconnue");
         setPoidsActuel(75);
         setTailleActuel(175);
+        listeAliments = new ArrayList<Aliments>();
+        listeAliments.add(new Aliments());
     }
 
 
@@ -109,5 +113,12 @@ public class Utilisateur {
     }
 
 
+    public ArrayList<Aliments> getListeAliments() {
+        return listeAliments;
+    }
+     private void loadAlimentsCSV()
+     {
+         // a faire voir avec le prof ce qui est le mieux
 
+     }
 }
