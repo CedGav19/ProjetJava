@@ -1,18 +1,22 @@
+package Swing;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AjoutSéance extends JDialog {
+public class PopAjoutPlat extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JFormattedTextField formattedTextField1;
-    private JTextField textField2;
     private JSpinner spinner1;
     private JTextField textField1;
-    private JCheckBox courseCheckBox;
-    private JCheckBox courirUneHeureCheckBox;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
+    private JRadioButton radioButton4;
+    private JRadioButton radioButton5;
+    private JRadioButton radioButton6;
 
-    public AjoutSéance() {
+    public PopAjoutPlat() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -56,7 +60,7 @@ public class AjoutSéance extends JDialog {
     }
 
     public static void main(String[] args) {
-        AjoutSéance dialog = new AjoutSéance();
+        PopAjoutPlat dialog = new PopAjoutPlat();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

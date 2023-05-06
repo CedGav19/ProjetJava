@@ -1,16 +1,15 @@
+package Swing;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PopAjoutAliment extends JDialog {
+public class PopAjoutPlatMange extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JSpinner spinner1;
-    private JSpinner spinner2;
+    private JComboBox comboBox1;
 
-    public PopAjoutAliment() {
+    public PopAjoutPlatMange() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -54,7 +53,7 @@ public class PopAjoutAliment extends JDialog {
     }
 
     public static void main(String[] args) {
-        PopAjoutAliment dialog = new PopAjoutAliment();
+        PopAjoutPlatMange dialog = new PopAjoutPlatMange();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

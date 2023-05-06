@@ -1,13 +1,20 @@
+package Swing;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PopAjoutPlatMange extends JDialog {
+public class AjoutSéance extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JComboBox comboBox1;
+    private JFormattedTextField formattedTextField1;
+    private JTextField textField2;
+    private JSpinner spinner1;
+    private JTextField textField1;
+    private JCheckBox courseCheckBox;
+    private JCheckBox courirUneHeureCheckBox;
 
-    public PopAjoutPlatMange() {
+    public AjoutSéance() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -51,7 +58,7 @@ public class PopAjoutPlatMange extends JDialog {
     }
 
     public static void main(String[] args) {
-        PopAjoutPlatMange dialog = new PopAjoutPlatMange();
+        AjoutSéance dialog = new AjoutSéance();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
