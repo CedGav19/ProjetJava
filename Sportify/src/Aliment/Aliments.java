@@ -67,12 +67,7 @@ public class Aliments {
 
     @Override
     public String toString() {
-        return "Aliment.Aliments{" +
-                "kcal=" + kcal +
-                ", proteine=" + proteine +
-                ", type='" + type + '\'' +
-                ", nom='" + nom + '\'' +
-                '}';
+        return getNom()+ ", "+getKcal()+" kcal, " + getProteine()+"g " ;
     }
 
     public boolean Equals(Aliments obj)

@@ -26,6 +26,8 @@ public class Utilisateur {
     ArrayList<Objectif> mesObjectifs;
 
     ArrayList<Aliments> listeAliments;
+    ArrayList<Recette> listePlatsMange;
+
 
 
     public void setNom(String nom) {
@@ -71,6 +73,14 @@ public class Utilisateur {
     public static Utilisateur getInstance() {
         if (instance==null) instance = new Utilisateur();
         return instance;}
+
+    public ArrayList<Recette> getMesRecette() {
+        return mesRecette;
+    }
+
+    public ArrayList<Recette> getListePlatsMange() {
+        return listePlatsMange;
+    }
     //endregion
 
 
@@ -83,6 +93,24 @@ public class Utilisateur {
         setTailleActuel(175);
         listeAliments = new ArrayList<Aliments>();
         listeAliments.add(new Aliments());
+        listePlatsMange = new ArrayList<Recette>();
+        mesRecette = new ArrayList<Recette>();
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        mesRecette.add(new Recette());
+        listePlatsMange.add(new Recette());
+
     }
 
 

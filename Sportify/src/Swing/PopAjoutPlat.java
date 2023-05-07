@@ -1,25 +1,32 @@
 package Swing;
 
+import Singleton.Utilisateur;
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class PopAjoutPlat extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JSpinner spinner1;
     private JTextField textField1;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-    private JRadioButton radioButton3;
-    private JRadioButton radioButton4;
-    private JRadioButton radioButton5;
-    private JRadioButton radioButton6;
+    private JScrollPane ScrollPaneAliment;
 
     public PopAjoutPlat() {
         setContentPane(contentPane);
         setModal(true);
+        pack();
+        setVisible(true);
         getRootPane().setDefaultButton(buttonOK);
+
+        JPanel PanelAliments = new JPanel();
+        PanelAliments.setLayout(new GridLayout(0, 1));
+        for (int i = 0; i< Utilisateur.getInstance().getListeAliments().size(); i++)
+        {
+            PanelAliments.add(new Checkbox(Utilisateur.getInstance().getListeAliments().get(0).toString()));
+        }
+        ScrollPaneAliment.setViewportView(PanelAliments);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -61,8 +68,7 @@ public class PopAjoutPlat extends JDialog {
 
     public static void main(String[] args) {
         PopAjoutPlat dialog = new PopAjoutPlat();
-        dialog.pack();
-        dialog.setVisible(true);
+
         System.exit(0);
     }
 }
