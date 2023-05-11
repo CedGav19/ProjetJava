@@ -30,10 +30,12 @@ pages :
 - alimentation : - liste aliment ingere - ajout aliment - creer recete - recap quotidien - aliment preferee - score
 
 
-
+ROMAIN ET CEDRIC 
 fichier , property =  poids kg , pounds 
-        binaire , singleton comme les serializer en c# 
+        binaire , singleton comme les serializer en c#  qaudn on coupe l'appli 
         exercice/aliment : csv ou .txt 
+        
+
 
 
 choses a faire : 
@@ -41,47 +43,55 @@ choses a faire :
 Logique , si la date du jour est differente de la date de derniere sauvegarde , on affiche les aliments mange a vide 
 
 MENU :  tout 
-
-Dans popSeance :  -       implementer les exercices dans le scrollpane   
+CEDRIC
+Dans AjoutSeance :  -       implementer les exercices dans le scrollpane   
                   -  implementer le formulaire + boutons 
+                  
+  CEDRIC 
  Alimentation  :  implementer aliment        CEDRIC ( 11-05-23)
                       -   implementer plats et plats mange 
                   - bindinG des checkbox 
                   - bing des boytons ( aliments , plats , plats mange ) 
-                  
+  CEDRIC                 
   Exercices  : -implement liste exercices ,µ
                 -implementer liste seance , afficher les exx des seance en dessous de la                                checkbox seance 
                -  implemnter les boutons ( ex , seancces ) 
-               
+        
+        
+    ROMAIN 
    Home :   - binding  des listes ( exercies de la seance + aliments + objectif + objectif realise ) 
              - bouton choisir seance +  
              - bouton fait objectifs , coche et passe dans l'autre  ( boucle pour verif les isselected ) 
-             
+             - 
              - pourcentage prot/kcal mange 
              
    Supprimer Main : 
    
-   
+   CEDRIC
    PopAjoutAliment :  - implemeent le formulaire 
                         - bouton ok , on save l'aliment quand on appuye sur ok 
                         - supprimer type de l'interface graphique 
-                        
+    CEDRIC               
    PopAjoutPlat :    - implement la list des aliments ( checkbox) 
                         -   implementer le formulaire 
                         - on boucle en checkant sur tous les aliments si ils sont check 
                         (  ou alors quand quand on check un element on l'ajoute a une liste de nouvel recette)  
                         - bouton ok , ajout dans les recette du singleton 
    
+   CEDRIC
    AjoutPlat mange  :  comnobox qui liste tous les recettes  + boutons ok
    
-   
+   CEDRIC 
    popExercice  :  - implementer formulaire 
                            pour type de muscle faire un combobox ( dos , pec , biceps , tricpes , jambe ) 
                          - pour le temps ,si pas coche , constructeur sans le temps , si non on prend le temps 
                          - si force , on construit un exerciceForce , si non ExerciceCardio
                         - bouton ok ajoute dans la liste des exercies et sauvegarde 
+   ROMAIN
    PopObjectifs : - impleter formulaire 
    
+   
+   ROMAIN
    Profile :  - supprimer mot de passe 
                - impletent "votreprofile" 
                - modifier = sauvegarder les nouvelles donnees 
