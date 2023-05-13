@@ -5,6 +5,8 @@ import Exercices.Seance;
 import Objectifs.Objectif;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.*;
+
 
 import java.util.ArrayList;
 
@@ -111,6 +113,11 @@ public class Utilisateur {
         mesRecette.add(new Recette());
         listePlatsMange.add(new Recette());
 
+
+
+        loadAlimentsCSV();
+        System.out.println(listeAliments);
+
     }
 
 
@@ -146,7 +153,22 @@ public class Utilisateur {
     }
      private void loadAlimentsCSV()
      {
-         // a faire voir avec le prof ce qui est le mieux
 
+
+         try {
+            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Desktop\\Nouveau dossier (2)\\ProjetJava\\Sportify\\src\\Aliments.csv")) ;
+             String ligne;
+             br.readLine(); // pour passer le header du fichier csv
+             while ((ligne = br.readLine()) != null) {
+                 String[] proprietes = ligne.split(";");
+                 Aliments aliment = new Aliments(proprietes[0],Integer.parseInt(proprietes[1]),Float.parseFloat(proprietes[2]),Integer.parseInt(proprietes[3]) ) ;
+
+               listeAliments.add(aliment) ;
+             }
+         } catch (IOException e) {
+             System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
+         }
      }
+
+
 }

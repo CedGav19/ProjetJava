@@ -31,7 +31,7 @@ public class Alimentation extends JFrame {
         PanelAliments.setLayout(new GridLayout(0, 1));
         for (int i = 0 ; i<Utilisateur.getInstance().getListeAliments().size();i++)
         {
-            PanelAliments.add(new Checkbox(Utilisateur.getInstance().getListeAliments().get(0).toString()));
+            PanelAliments.add(new Checkbox(Utilisateur.getInstance().getListeAliments().get(i).toString()));
         }
        ScrollPaneAliments.setViewportView(PanelAliments);
         JPanel PanelRecette = new JPanel();
