@@ -40,9 +40,12 @@ fichier , property =  poids kg , pounds
 
 choses a faire : 
 
+
 Logique , si la date du jour est differente de la date de derniere sauvegarde , on affiche les aliments mange a vide 
 
 MENU :  tout 
+
+
 CEDRIC
 Dans AjoutSeance :  -       implementer les exercices dans le scrollpane   
                   -  implementer le formulaire + boutons 
@@ -67,10 +70,13 @@ Dans AjoutSeance :  -       implementer les exercices dans le scrollpane
              
    Supprimer Main : 
    
+   
+   
    CEDRIC
    PopAjoutAliment :  - implemeent le formulaire 
                         - bouton ok , on save l'aliment quand on appuye sur ok 
                         - supprimer type de l'interface graphique 
+                        
     CEDRIC               
    PopAjoutPlat :    - implement la list des aliments ( checkbox) 
                         -   implementer le formulaire 
