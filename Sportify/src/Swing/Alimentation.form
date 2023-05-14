@@ -57,20 +57,7 @@
                       <text value="+"/>
                     </properties>
                   </component>
-                  <component id="d0dc1" class="javax.swing.JButton" binding="modifButton" default-binding="true">
-                    <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="70" height="30"/>
-                        <preferred-size width="70" height="30"/>
-                        <maximum-size width="70" height="30"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <background color="-607633"/>
-                      <text value="Modif"/>
-                    </properties>
-                  </component>
-                  <component id="2558a" class="javax.swing.JButton" binding="button3" default-binding="true">
+                  <component id="2558a" class="javax.swing.JButton" binding="ButtonSupAliments">
                     <constraints>
                       <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="50" height="30"/>
@@ -160,7 +147,7 @@
                 <properties/>
                 <border type="line"/>
                 <children>
-                  <grid id="1983e" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="1983e" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -168,22 +155,9 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="1acf0" class="javax.swing.JButton" default-binding="true">
+                      <component id="78e9b" class="javax.swing.JButton" binding="ButtonSupPlat">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                            <minimum-size width="70" height="30"/>
-                            <preferred-size width="70" height="30"/>
-                            <maximum-size width="70" height="30"/>
-                          </grid>
-                        </constraints>
-                        <properties>
-                          <background color="-607633"/>
-                          <text value="Modif"/>
-                        </properties>
-                      </component>
-                      <component id="78e9b" class="javax.swing.JButton" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <minimum-size width="50" height="30"/>
                             <preferred-size width="50" height="30"/>
                             <maximum-size width="50" height="30"/>
@@ -194,7 +168,7 @@
                           <text value="-"/>
                         </properties>
                       </component>
-                      <component id="fb01d" class="javax.swing.JButton" default-binding="true">
+                      <component id="fb01d" class="javax.swing.JButton" binding="ButtonAjoutPlat">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <minimum-size width="50" height="30"/>
@@ -217,7 +191,7 @@
                     <properties/>
                     <border type="none" title="Plats mangé aujourd'hui"/>
                     <children>
-                      <grid id="5cc83" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="5cc83" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -225,22 +199,9 @@
                         <properties/>
                         <border type="none"/>
                         <children>
-                          <component id="abc15" class="javax.swing.JButton" default-binding="true">
-                            <constraints>
-                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                                <minimum-size width="70" height="30"/>
-                                <preferred-size width="70" height="30"/>
-                                <maximum-size width="70" height="30"/>
-                              </grid>
-                            </constraints>
-                            <properties>
-                              <background color="-607633"/>
-                              <text value="Modif"/>
-                            </properties>
-                          </component>
                           <component id="4e68b" class="javax.swing.JButton" default-binding="true">
                             <constraints>
-                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                                 <minimum-size width="50" height="30"/>
                                 <preferred-size width="50" height="30"/>
                                 <maximum-size width="50" height="30"/>

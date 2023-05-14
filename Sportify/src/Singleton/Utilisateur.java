@@ -6,12 +6,9 @@ import Objectifs.Objectif;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
-
-
 import java.util.ArrayList;
 
 
-// sert de singleton
 public class Utilisateur {
 
     //region vaiable et set/get
@@ -22,13 +19,18 @@ public class Utilisateur {
     private float poidsActuel;
     private int tailleActuel;
 
-    ArrayList<Seance> mesSeance;
-    ArrayList<Recette> mesRecette;
-    ArrayList<Objectif> mesObjectifsReussis;
-    ArrayList<Objectif> mesObjectifs;
+    private ArrayList<Seance> mesSeance;
+    private ArrayList<Recette> mesRecette;
+    private ArrayList<Objectif> mesObjectifsReussis;
+    private  ArrayList<Objectif> mesObjectifs;
+    private ArrayList<Aliments> listeAliments;
+    private ArrayList<Recette> listePlatsMange;
 
-    ArrayList<Aliments> listeAliments;
-    ArrayList<Recette> listePlatsMange;
+
+
+    // Variables utiles lors des interactions
+
+    private  Aliments AlimentSelected ;
 
 
 
@@ -64,7 +66,6 @@ public class Utilisateur {
     public String getDate() {
         return date;
     }
-
     public String getNom() {
         return nom;
     }
@@ -82,6 +83,14 @@ public class Utilisateur {
 
     public ArrayList<Recette> getListePlatsMange() {
         return listePlatsMange;
+    }
+
+    public void setAlimentSelected(Aliments alimentSelected) {
+        AlimentSelected = alimentSelected;
+    }
+
+    public Aliments getAlimentSelected() {
+        return AlimentSelected;
     }
     //endregion
 
@@ -101,22 +110,11 @@ public class Utilisateur {
         mesRecette.add(new Recette());
         mesRecette.add(new Recette());
         mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
         listePlatsMange.add(new Recette());
 
 
 
         loadAlimentsCSV();
-        System.out.println(listeAliments);
 
     }
 
@@ -156,7 +154,7 @@ public class Utilisateur {
 
 
          try {
-            BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\user\\Desktop\\Nouveau dossier (2)\\ProjetJava\\Sportify\\src\\Aliments.csv")) ;
+             BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\Aliments.csv")) ;
              String ligne;
              br.readLine(); // pour passer le header du fichier csv
              while ((ligne = br.readLine()) != null) {

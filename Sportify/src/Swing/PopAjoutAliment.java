@@ -14,6 +14,9 @@ public class PopAjoutAliment extends JDialog {
 
     public PopAjoutAliment() {
         setContentPane(contentPane);
+        setTitle("Ajouter un aliment");
+        setSize(400,300);
+        setVisible(true);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
@@ -43,6 +46,8 @@ public class PopAjoutAliment extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+
     }
 
     private void onOK() {
