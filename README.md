@@ -52,9 +52,10 @@ Dans AjoutSeance :  -       implementer les exercices dans le scrollpane
                   
   CEDRIC 
  Alimentation  :  implementer aliment        CEDRIC ( 11-05-23)
-                      -   implementer plats et plats mange 
-                  - bindinG des checkbox 
-                  - bing des boytons ( aliments , plats , plats mange ) 
+                      -   implementer plats et plats mange CEDRIC (14-05-23)
+                  - bindinG des checkbox(aliments , plats)  CEDRIC (14-05-23)
+                  - bing des boytons ( aliments , plats )  CEDRIC(14-05-23)
+                   - boutons plats mange + bindinG des checkbox 
   CEDRIC                 
   Exercices  : -implement liste exercices ,µ
                 -implementer liste seance , afficher les exx des seance en dessous de la                                checkbox seance 
