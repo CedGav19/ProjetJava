@@ -50,7 +50,7 @@ CEDRIC
 Dans AjoutSeance :  -       implementer les exercices dans le scrollpane   
                   -  implementer le formulaire + boutons 
                   
-  CEDRIC 
+  CEDRIC   (FAIT  LE 21/05)
  Alimentation  :  implementer aliment        CEDRIC ( 11-05-23)
                       -   implementer plats et plats mange CEDRIC (14-05-23)
                   - bindinG des checkbox(aliments , plats)  CEDRIC (14-05-23)
