@@ -1,57 +1,40 @@
 package Swing;
 
+import Aliment.Aliments;
+import Singleton.Utilisateur;
+
 import javax.swing.*;
 import java.awt.event.*;
 
-public class PopAjoutAliment extends JDialog {
+public class PopAjoutAliment extends JDialog implements ActionListener {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JSpinner spinner1;
-    private JSpinner spinner2;
+    private JTextField textFieldnom;
+    private JSpinner spinnerproteine;
+    private JSpinner spinnerscore;
+    private JSpinner spinnerkcal;
 
     public PopAjoutAliment() {
         setContentPane(contentPane);
         setTitle("Ajouter un aliment");
         setSize(400,300);
-        setVisible(true);
+
+
+        buttonCancel.addActionListener(this);
+        buttonOK.addActionListener(this);
+
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
-
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
-
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() when cross is clicked
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
-
-
+        pack();
+        setVisible(true);
     }
 
     private void onOK() {
         // add your code here
+        Aliments A1 = new Aliments(textFieldnom.getText(),(int)spinnerkcal.getValue(),(int)spinnerproteine.getValue(),(int)spinnerscore.getValue());
+
+        Utilisateur.getInstance().getListeAliments().add(A1);
+        System.out.println(A1);
         dispose();
     }
 
@@ -65,5 +48,11 @@ public class PopAjoutAliment extends JDialog {
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==buttonCancel)onCancel();
+        if(e.getSource()==buttonOK)onOK();
     }
 }

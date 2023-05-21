@@ -103,15 +103,8 @@ public class Utilisateur {
         setPoidsActuel(75);
         setTailleActuel(175);
         listeAliments = new ArrayList<Aliments>();
-        listeAliments.add(new Aliments());
-        listePlatsMange = new ArrayList<Recette>();
         mesRecette = new ArrayList<Recette>();
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        mesRecette.add(new Recette());
-        listePlatsMange.add(new Recette());
-
+        listePlatsMange = new ArrayList<Recette>();
 
 
         loadAlimentsCSV();

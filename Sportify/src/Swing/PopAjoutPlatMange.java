@@ -1,50 +1,38 @@
 package Swing;
 
-import javax.swing.*;
-import java.awt.event.*;
+import Singleton.Utilisateur;
 
-public class PopAjoutPlatMange extends JDialog {
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class PopAjoutPlatMange extends JDialog implements ActionListener {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JComboBox comboBox1;
+    private JComboBox ComboboxRecette;
 
     public PopAjoutPlatMange() {
         setContentPane(contentPane);
+
+        for (int i = 0; i< Utilisateur.getInstance().getMesRecette().size(); i++) {
+            ComboboxRecette.addItem(Utilisateur.getInstance().getMesRecette().get(i).toString());
+        }
+        ComboboxRecette.addActionListener(this);
+        buttonCancel.addActionListener(this);
+        buttonOK.addActionListener(this);
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
-
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
-
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() when cross is clicked
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        pack();
+        setVisible(true);
     }
 
     private void onOK() {
-        // add your code here
-        dispose();
+            System.out.println(ComboboxRecette.getSelectedIndex());
+
+            Utilisateur.getInstance().getListePlatsMange().add(Utilisateur.getInstance().getMesRecette().get(ComboboxRecette.getSelectedIndex())) ;
+
+            dispose();
     }
 
     private void onCancel() {
@@ -57,5 +45,11 @@ public class PopAjoutPlatMange extends JDialog {
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==buttonCancel)onCancel();
+        if(e.getSource()==buttonOK)onOK();
     }
 }
