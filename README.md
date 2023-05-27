@@ -58,37 +58,36 @@ Dans AjoutSeance :  -       implementer les exercices dans le scrollpane
                    - boutons plats mange + bindinG des checkbox 
   CEDRIC                 
   Exercices  : -implement liste exercices ,µ
-                -implementer liste seance , afficher les exx des seance en dessous de la                                checkbox seance 
+                -implementer liste seance , afficher les exx des seance en dessous de la checkbox seance 
                -  implemnter les boutons ( ex , seancces ) 
         
         
     ROMAIN 
    Home :   - binding  des listes ( exercies de la seance + aliments + objectif + objectif realise ) 
              - bouton choisir seance +  
-             - bouton fait objectifs , coche et passe dans l'autre  ( boucle pour verif les isselected ) 
-             - 
+             - bouton fait objectifs , coche et passe dans l'autre  ( boucle pour verif les isselected )
              - pourcentage prot/kcal mange 
              
    Supprimer Main : 
    
-   
-   
-   CEDRIC
+  
+   CEDRIC  (FAIT  LE 21/05)
    PopAjoutAliment :  - implemeent le formulaire 
                         - bouton ok , on save l'aliment quand on appuye sur ok 
                         - supprimer type de l'interface graphique 
                         
-    CEDRIC               
+    CEDRIC   (FAIT  LE 21/05)        
    PopAjoutPlat :    - implement la list des aliments ( checkbox) 
                         -   implementer le formulaire 
                         - on boucle en checkant sur tous les aliments si ils sont check 
                         (  ou alors quand quand on check un element on l'ajoute a une liste de nouvel recette)  
                         - bouton ok , ajout dans les recette du singleton 
    
-   CEDRIC
+   CEDRIC  (FAIT  LE 21/05)
    AjoutPlat mange  :  comnobox qui liste tous les recettes  + boutons ok
    
    CEDRIC 
+   
    popExercice  :  - implementer formulaire 
                            pour type de muscle faire un combobox ( dos , pec , biceps , tricpes , jambe ) 
                          - pour le temps ,si pas coche , constructeur sans le temps , si non on prend le temps 
