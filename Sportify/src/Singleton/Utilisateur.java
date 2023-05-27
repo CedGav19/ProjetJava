@@ -1,8 +1,12 @@
 package Singleton;
 import Aliment.Aliments;
 import Aliment.Recette;
+import Exercices.Exercice;
+import Exercices.ExerciceForce;
 import Exercices.Seance;
 import Objectifs.Objectif;
+import Swing.Exercices;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
@@ -19,12 +23,18 @@ public class Utilisateur {
     private float poidsActuel;
     private int tailleActuel;
 
-    private ArrayList<Seance> mesSeance;
+
     private ArrayList<Recette> mesRecette;
     private ArrayList<Objectif> mesObjectifsReussis;
     private  ArrayList<Objectif> mesObjectifs;
     private ArrayList<Aliments> listeAliments;
     private ArrayList<Recette> listePlatsMange;
+
+    private ArrayList<Exercice> listeEx;
+    private ArrayList<Seance> mesSeance;
+    private ArrayList<ExerciceForce> ExercicesForce;
+
+    private Seance seanceActuel;
 
 
 
@@ -85,6 +95,10 @@ public class Utilisateur {
         return listePlatsMange;
     }
 
+    public ArrayList<ExerciceForce> getExercicesForce() {
+        return ExercicesForce;
+    }
+
     public void setAlimentSelected(Aliments alimentSelected) {
         AlimentSelected = alimentSelected;
     }
@@ -105,10 +119,12 @@ public class Utilisateur {
         listeAliments = new ArrayList<Aliments>();
         mesRecette = new ArrayList<Recette>();
         listePlatsMange = new ArrayList<Recette>();
+        ExercicesForce = new ArrayList<ExerciceForce>();
+        listeEx=new ArrayList<Exercice>();
 
 
         loadAlimentsCSV();
-
+        loadExerciceForceCsv();
     }
 
 
@@ -160,6 +176,26 @@ public class Utilisateur {
              System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
          }
      }
+
+    private void loadExerciceForceCsv()
+    {
+
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\ExercicesForce.csv")) ;
+            String ligne;
+            br.readLine(); // pour passer le header du fichier csv
+            while ((ligne = br.readLine()) != null) {
+                String[] proprietes = ligne.split(",");
+                ExerciceForce Ex = new ExerciceForce(proprietes[0],proprietes[1],Integer.parseInt(proprietes[3]),
+                        Integer.parseInt(proprietes[2]),Boolean.parseBoolean(proprietes[4]));
+
+                ExercicesForce.add(Ex) ;
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
+        }
+    }
 
 
 }

@@ -25,11 +25,11 @@ public class ExerciceForce extends Exercice {
 
     @Override
     public String toString() {
-        return
-                super.toString()
-                +"Exercices.ExerciceForce{" +
-                "polyarticulaire=" + polyarticulaire +
-                '}';
+        String tmp = super.toString();
+        if(polyarticulaire==true) return tmp+", polyarticulaire" ;
+
+        return tmp+", mono-articulaire" ;
+
     }
     public boolean Equals(Exercice obj)
     {

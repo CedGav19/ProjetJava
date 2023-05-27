@@ -66,14 +66,9 @@ public  abstract class Exercice {
     }
 
     // jamaois instanciable donc inutile ( sauf pour lest test )
-    /*@Override
+    @Override
     public String toString() {
-        return "Exercices.Exercice{" +
-                "muscle='" + getMuscle() + '\'' +
-                ", tempsEstime=" + getTempsEstime() +
-                ", nom='" + getNom() + '\'' +
-                ", score=" + getScore() +
-                '}';
+        return nom +", " + muscle+", "+ tempsEstime+", "+ score;
     }
 
     public boolean Equals(Exercice obj)
@@ -82,7 +77,7 @@ public  abstract class Exercice {
             return true ;
         else
             return false;
-    } */
+    }
 
     /*public static void main(String[] args) {
 
