@@ -2,10 +2,12 @@ package Singleton;
 import Aliment.Aliments;
 import Aliment.Recette;
 import ExercicesClass.Exercice;
+import ExercicesClass.ExerciceCardio;
 import ExercicesClass.ExerciceForce;
 import ExercicesClass.Seance;
 import Objectifs.Objectif;
 
+import javax.naming.directory.SearchControls;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
@@ -14,92 +16,99 @@ import java.util.ArrayList;
 
 public class Utilisateur {
 
-    //Salut mon petit Cédric
     //region vaiable et set/get
     private static Utilisateur instance = new Utilisateur() ;
-    private String nom;
-    private String prenom;
-    private String date; // mettre en type date
-    private float poidsActuel;
-    private int tailleActuel;
 
-
+    //
+    //
+    //cedric
     private ArrayList<Recette> mesRecette;
+     private ArrayList<Aliments> listeAliments;
+    private ArrayList<Recette> listePlatsMange;
+    private   ArrayList<ExerciceForce> listeExercicesForce;
+    private   ArrayList<ExerciceCardio> listeExercicesCardio;
+    private ArrayList<Seance> mesSeances;
+
+    //
+    //
+    //romain
     private ArrayList<Objectif> mesObjectifsReussis;
     private  ArrayList<Objectif> mesObjectifs;
-    private ArrayList<Aliments> listeAliments;
-    private ArrayList<Recette> listePlatsMange;
-
-    private ArrayList<Exercice> listeEx;
-    private ArrayList<Seance> mesSeance;
-    private ArrayList<ExerciceForce> ExercicesForce;
-
-    private Seance seanceActuel;
 
 
 
     // Variables utiles lors des interactions
 
-    private  Aliments AlimentSelected ;
-
-
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-        // faire condition que la date existe
-    }
-
-    public void setPoidsActuel(float poidsActuel) {
-        if (poidsActuel > 0) this.poidsActuel = poidsActuel;
-    }
-
-    public void setTailleActuel(int tailleActuel) {
-        if (tailleActuel > 0) this.tailleActuel = tailleActuel;
-    }
-
-    public float getPoidsActuel() {
-        return poidsActuel;
-    }
-
-    public int getTailleActuel() {
-        return tailleActuel;
-    }
-
-    public String getDate() {
-        return date;
-    }
-    public String getNom() {
-        return nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
     public static Utilisateur getInstance() {
         if (instance==null) instance = new Utilisateur();
         return instance;}
 
+    //
+    //
+    //cedric
     public ArrayList<Recette> getMesRecette() {
         return mesRecette;
+    }
+    public void addRecette(Recette r){
+        mesRecette.add(r);
+    }
+    public void removeRecette(Recette r){
+        mesRecette.remove(r);
     }
 
     public ArrayList<Recette> getListePlatsMange() {
         return listePlatsMange;
     }
-
-    public ArrayList<ExerciceForce> getExercicesForce() {
-        return ExercicesForce;
+    public void addPlatMange(Recette r){
+        listePlatsMange.add(r);
+    }
+    public void removePlatMange(Recette r){
+        listePlatsMange.remove(r);
     }
 
-    //Romain Test
+    public ArrayList<ExerciceForce> getExercicesForce() {
+        return listeExercicesForce;
+    }
+    public void addExerciceForce(ExerciceForce r){
+        listeExercicesForce.add(r);
+    }
+    public void removeExerciceForce(ExerciceForce r){
+        listeExercicesForce.remove(r);
+    }
+
+    public ArrayList<ExerciceCardio> getListeExercicesCardio() {
+        return listeExercicesCardio;
+    }
+    public void addExerciceCardio(ExerciceCardio r){
+        listeExercicesCardio.add(r);
+    }
+    public void removeExerciceCardio(ExerciceCardio r){
+        listeExercicesCardio.remove(r);
+    }
+
+    public ArrayList<Seance> getMesSeances() {
+        return mesSeances;
+    }
+    public void addSeance(Seance r){
+        mesSeances.add(r);
+    }
+    public void removeSeance(Seance r){
+        mesSeances.remove(r);
+    }
+
+    public ArrayList<Aliments> getListeAliments() {
+        return listeAliments;
+    }
+    public void addAliment(Aliments r){
+        listeAliments.add(r);
+    }
+    public void removeAliment(Aliments r){
+        listeAliments.remove(r);
+    }
+
+    //
+    //
+    //Romain
     public ArrayList<Objectif> getMesObjectifs() {
         return mesObjectifs;
     }
@@ -108,51 +117,7 @@ public class Utilisateur {
     }
     //fin Romain test
 
-    public void setAlimentSelected(Aliments alimentSelected) {
-        AlimentSelected = alimentSelected;
-    }
-
-    public Aliments getAlimentSelected() {
-        return AlimentSelected;
-    }
-    //endregion
-
-
-    //region constructeur
-    private Utilisateur() {
-        setNom("inconnu");
-        setPrenom("inconnu");
-        setDate("inconnue");
-        setPoidsActuel(75);
-        setTailleActuel(175);
-        listeAliments = new ArrayList<Aliments>();
-        mesRecette = new ArrayList<Recette>();
-        listePlatsMange = new ArrayList<Recette>();
-        ExercicesForce = new ArrayList<ExerciceForce>();
-        listeEx=new ArrayList<Exercice>();
-
-        //Test Romain
-        mesObjectifs = new ArrayList<Objectif>();
-        mesObjectifsReussis = new ArrayList<Objectif>();
-        //Fin test Romain
-
-
-        loadAlimentsCSV();
-        loadExerciceForceCsv();
-    }
-
-
-    //endregion
-
-    public void ajouterSceance(Seance s) {
-        // faire les ajout dans les conteneur aussi
-        mesSeance.add(s);
-    }
-
-    public void ajouterRecette(Recette r) {
-        mesRecette.add(r);
-    }
-
+    /*
     public void ajouterObjectifReussis(Objectif o) {
         mesObjectifsReussis.add(o);
     }
@@ -166,15 +131,14 @@ public class Utilisateur {
             mesObjectifs.remove(O);
             mesObjectifsReussis.add(O);
         }
-    }
+    }*/
 
 
-    public ArrayList<Aliments> getListeAliments() {
-        return listeAliments;
-    }
+
+
+
      private void loadAlimentsCSV()
      {
-
 
          try {
              BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\Aliments.csv")) ;
@@ -193,8 +157,6 @@ public class Utilisateur {
 
     private void loadExerciceForceCsv()
     {
-
-
         try {
             BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\ExercicesForce.csv")) ;
             String ligne;
@@ -204,12 +166,35 @@ public class Utilisateur {
                 ExerciceForce Ex = new ExerciceForce(proprietes[0],proprietes[1],Integer.parseInt(proprietes[3]),
                         Integer.parseInt(proprietes[2]),1);
 
-                ExercicesForce.add(Ex) ;
+                listeExercicesForce.add(Ex) ;
             }
         } catch (IOException e) {
             System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
         }
     }
+    //endregion
+
+
+    //region constructeur
+    private Utilisateur() {
+        listeAliments = new ArrayList<Aliments>();
+        mesRecette = new ArrayList<Recette>();
+        listePlatsMange = new ArrayList<Recette>();
+        listeExercicesForce = new ArrayList<ExerciceForce>();
+        listeExercicesCardio = new ArrayList<ExerciceCardio>();
+        mesSeances = new ArrayList<Seance>();
+        //Test Romain
+        mesObjectifs = new ArrayList<Objectif>();
+        mesObjectifsReussis = new ArrayList<Objectif>();
+        //Fin test Romain
+
+
+        loadAlimentsCSV();
+        loadExerciceForceCsv();
+    }
+
+
+    //endregion
 
 
 }

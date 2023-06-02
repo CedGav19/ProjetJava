@@ -15,6 +15,8 @@ public class PopObjectifs extends JDialog {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
+    private JTextField textField;
+    private JFormattedTextField formattedTextField1;
     private JTextField textfieldIntitulé;
     private JFormattedTextField textFieldDate;
 
@@ -62,8 +64,8 @@ public class PopObjectifs extends JDialog {
         */
 
         //Test Romain
-        Objectif O1 = new Objectif(textfieldIntitulé.getText(),textFieldDate.getText());
-        System.out.println(O1);
+       // Objectif O1 = new Objectif(textfieldIntitulé.getText(),textFieldDate.getText());
+      //  System.out.println(O1);
         //Romain fin
         dispose();
     }
