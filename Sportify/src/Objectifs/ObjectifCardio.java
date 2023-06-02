@@ -1,8 +1,7 @@
 package Objectifs;
 
-import Exercices.Exercice;
-import Exercices.ExerciceCardio;
-import Exercices.ExerciceForce;
+import ExercicesClass.Exercice;
+import ExercicesClass.ExerciceCardio;
 
 public class ObjectifCardio extends Objectif {
     private ExerciceCardio ex;

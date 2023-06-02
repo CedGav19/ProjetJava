@@ -1,6 +1,4 @@
-package Exercices;
-
-import Aliment.Aliments;
+package ExercicesClass;
 
 public  abstract class Exercice {
 

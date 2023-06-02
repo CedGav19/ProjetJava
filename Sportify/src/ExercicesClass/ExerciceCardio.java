@@ -1,35 +1,34 @@
-package Exercices;
+package ExercicesClass;
 
-public class ExerciceForce extends Exercice {
+public class ExerciceCardio extends Exercice {
+    private int distance ;
 
-    private int poids ;
-
-    public void setPoids(int poids) {
-        this.poids = poids;
+    public void setDistance(int distance) {
+        if(distance>0) this.distance = distance;
     }
 
-    public int getPoids() {
-        return poids;
+    public int getDistance() {
+        return distance;
     }
 
-
-    public ExerciceForce()
+    public ExerciceCardio()
     {
         super();
-        setPoids(0);
+        setDistance(0);
     }
-    public ExerciceForce(String n , String m , int sc , int tps , int pds )
+    public ExerciceCardio(String n , String m , int sc , int tps , int d )
     {
-        super( n ,  m , sc , tps);
-        setPoids(pds);
+        super(n,m,sc,tps);
+        setDistance(d);
     }
 
     @Override
     public String toString() {
-        String tmp = super.toString();
-        return tmp+"," + getPoids() ;
-
+        return super.toString() +
+                "distance=" + getDistance() +
+                '}';
     }
+
     public boolean Equals(Exercice obj)
     {
         if(this.getNom() == obj.getNom())
@@ -37,19 +36,18 @@ public class ExerciceForce extends Exercice {
         else
             return false;
     }
-
     public static void main(String[] args) {
+
         System.out.println("--Creation d'un objet grace au constructeur par defaut");
-        ExerciceForce O1 = new ExerciceForce();
+        ExerciceCardio O1 = new ExerciceCardio();
         System.out.println(O1); // appele toString pour fonctionner
         System.out.println("--Creation d'un objet grace precis");
-        ExerciceForce O2 = new ExerciceForce("developpé couché","pectoraux",3,0,1);
+        ExerciceCardio O2 = new ExerciceCardio("Course a pied ","tout",3,0,1000);
         System.out.println(O2);
-        ExerciceForce O3 = new ExerciceForce("developpé couché","pectoraux",5,20, 2) ;
+        ExerciceCardio O3 = new ExerciceCardio("Course a pied ","tout",5,20, 20) ;
         System.out.println(O3);
         System.out.println("--utilisation du Equals");
         System.out.println(O2.Equals(O3));
         System.out.println(O2.Equals(O1));
     }
-
 }

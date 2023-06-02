@@ -8,11 +8,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Exercices extends JFrame implements ActionListener {
-    private JButton buttonAddExerciceForce;
+    private JButton buttonAddExercice;
     private JButton buttonRemoveExerciceForce;
     private JScrollPane scrollpaneExCardio;
-    private JButton button2;
-    private JButton button4;
+    private JButton buttonRemoveExercice;
     private JScrollPane ScrollpaneExForce;
     private JPanel contentpane;
 
@@ -35,15 +34,31 @@ public class Exercices extends JFrame implements ActionListener {
         {
             PanelForce.add(new JCheckBox(Utilisateur.getInstance().getExercicesForce().get(i).toString()));
         }
-        buttonAddExerciceForce.addActionListener(this);
-        buttonRemoveExerciceForce.addActionListener(this);
+        buttonAddExercice.addActionListener(this);
+        buttonRemoveExercice.addActionListener(this);
         // parties Recette
         ScrollpaneExForce.setViewportView(PanelForce);
 
     }
 
+   private void onAddExercice()
+   {
+       int tmpEF = Utilisateur.getInstance().getExercicesForce().size();
+       PopExercices PE = new PopExercices();
+       if(tmpEF<Utilisateur.getInstance().getExercicesForce().size())
+       {
+           JPanel tmpPanel = (JPanel)ScrollpaneExForce.getViewport().getView() ;
+           tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getExercicesForce().get(tmpEF).toString()));
+       }
+
+   }
+
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==buttonAddExercice)onAddExercice();
 
+
+        repaint();
+        revalidate();
     }
 }

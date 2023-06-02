@@ -1,11 +1,6 @@
 package Aliment;
 
 
-import Exercices.Exercice;
-import Exercices.ExerciceForce;
-import Exercices.Seance;
-import Objectifs.ObjectifForce;
-
 import java.util.ArrayList;
 
 public class Recette {

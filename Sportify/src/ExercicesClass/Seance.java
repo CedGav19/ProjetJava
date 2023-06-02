@@ -1,7 +1,4 @@
-package Exercices;
-
-import Aliment.Aliments;
-import Aliment.Recette;
+package ExercicesClass;
 
 import java.util.ArrayList;
 

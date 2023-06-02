@@ -1,11 +1,10 @@
 package Singleton;
 import Aliment.Aliments;
 import Aliment.Recette;
-import Exercices.Exercice;
-import Exercices.ExerciceForce;
-import Exercices.Seance;
+import ExercicesClass.Exercice;
+import ExercicesClass.ExerciceForce;
+import ExercicesClass.Seance;
 import Objectifs.Objectif;
-import Swing.Exercices;
 
 import java.io.FileReader;
 import java.io.IOException;

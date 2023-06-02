@@ -1,7 +1,5 @@
 package Objectifs;
 
-import Exercices.ExerciceForce;
-
 public class ObjectifPoids extends Objectif{
     private float poidsSouhaite ;
 

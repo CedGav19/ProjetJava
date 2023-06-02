@@ -31,6 +31,7 @@ public class PopAjoutAliment extends JDialog implements ActionListener {
 
     private void onOK() {
         // add your code here
+
         Aliments A1 = new Aliments(textFieldnom.getText(),(int)spinnerkcal.getValue(),(int)spinnerproteine.getValue(),(int)spinnerscore.getValue());
 
         Utilisateur.getInstance().getListeAliments().add(A1);

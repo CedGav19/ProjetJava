@@ -1,8 +1,5 @@
 package Objectifs;
 
-import Exercices.Exercice;
-import Exercices.ExerciceForce;
-
 public  abstract class Objectif {
     //private boolean accompli ;     on fait 2 vecteur dans notre singleton un accompli et l'autre en cours
     private String dateSouhaite ;
