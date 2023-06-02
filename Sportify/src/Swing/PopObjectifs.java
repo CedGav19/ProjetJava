@@ -9,13 +9,21 @@ public class PopObjectifs extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField textField1;
-    private JFormattedTextField formattedTextField1;
+    private JRadioButton cardioRadioButton;
+    private JRadioButton forceRadioButton;
+    private JRadioButton poidsRadioButton;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
+    private JTextField textfieldIntitulé;
+    private JFormattedTextField textFieldDate;
 
     public PopObjectifs() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+
+        textFieldDate.setText("dd/mm/yyyy");
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -47,11 +55,17 @@ public class PopObjectifs extends JDialog {
 
     private void onOK() {
         // add your code here
-        dispose();
-        //Test Romain
-        //Objectif obj = new Objectif() ;
+        /*Permet de vérifier si le format est valide mais je ne sais pas si je dois le mettre en place
+        String test = textFieldDate.getText();
+        String Format = "dd/MM/yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(Format);
+        */
 
+        //Test Romain
+        Objectif O1 = new Objectif(textfieldIntitulé.getText(),textFieldDate.getText());
+        System.out.println(O1);
         //Romain fin
+        dispose();
     }
 
     private void onCancel() {
