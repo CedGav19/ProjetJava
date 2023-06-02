@@ -1,5 +1,7 @@
 package Swing;
 
+import Objectifs.Objectif;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -46,6 +48,10 @@ public class PopObjectifs extends JDialog {
     private void onOK() {
         // add your code here
         dispose();
+        //Test Romain
+        Objectif obj = new Objectif() ;
+
+        //Romain fin
     }
 
     private void onCancel() {

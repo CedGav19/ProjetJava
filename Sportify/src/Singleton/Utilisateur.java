@@ -99,6 +99,15 @@ public class Utilisateur {
         return ExercicesForce;
     }
 
+    //Romain Test
+    public ArrayList<Objectif> getMesObjectifs() {
+        return mesObjectifs;
+    }
+    public ArrayList<Objectif> getMesObjectifsReussis() {
+        return mesObjectifsReussis;
+    }
+    //fin Romain test
+
     public void setAlimentSelected(Aliments alimentSelected) {
         AlimentSelected = alimentSelected;
     }
@@ -121,6 +130,11 @@ public class Utilisateur {
         listePlatsMange = new ArrayList<Recette>();
         ExercicesForce = new ArrayList<ExerciceForce>();
         listeEx=new ArrayList<Exercice>();
+
+        //Test Romain
+        mesObjectifs = new ArrayList<Objectif>();
+        mesObjectifsReussis = new ArrayList<Objectif>();
+        //Fin test Romain
 
 
         loadAlimentsCSV();
