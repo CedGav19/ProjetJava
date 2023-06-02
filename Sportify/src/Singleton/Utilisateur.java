@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 public class Utilisateur {
 
+    //Salut mon petit Cédric
     //region vaiable et set/get
     private static Utilisateur instance = new Utilisateur() ;
     private String nom;
