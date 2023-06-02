@@ -53,9 +53,9 @@ public class ObjectifForce extends Objectif {
         System.out.println(O1); // appele toString pour fonctionner
         System.out.println("--Creation d'un objet grace precis");
 
-        ObjectifForce O2 = new ObjectifForce("100kg dev couch", "12 mai", new ExerciceForce("dev couch","pec" ,4,0,true),100);
+        ObjectifForce O2 = new ObjectifForce("100kg dev couch", "12 mai", new ExerciceForce("dev couch","pec" ,4,0,1),100);
         System.out.println(O2);
-        ObjectifForce O3 = new ObjectifForce("100kg dev couch", "12 mai",  new ExerciceForce("dev couch","pec" ,4,0,true),20) ;
+        ObjectifForce O3 = new ObjectifForce("100kg dev couch", "12 mai",  new ExerciceForce("dev couch","pec" ,4,0,2),20) ;
         System.out.println(O3);
         System.out.println("--utilisation du Equals");
         System.out.println(" entre objet 2 et 3 : "+O2.Equals(O3));

@@ -203,7 +203,7 @@ public class Utilisateur {
             while ((ligne = br.readLine()) != null) {
                 String[] proprietes = ligne.split(",");
                 ExerciceForce Ex = new ExerciceForce(proprietes[0],proprietes[1],Integer.parseInt(proprietes[3]),
-                        Integer.parseInt(proprietes[2]),Boolean.parseBoolean(proprietes[4]));
+                        Integer.parseInt(proprietes[2]),1);
 
                 ExercicesForce.add(Ex) ;
             }

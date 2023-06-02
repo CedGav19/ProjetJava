@@ -2,33 +2,32 @@ package Exercices;
 
 public class ExerciceForce extends Exercice {
 
-    private boolean polyarticulaire ;
+    private int poids ;
 
-    public void setPolyarticulaire(boolean polyarticulaire) {
-        this.polyarticulaire = polyarticulaire;
+    public void setPoids(int poids) {
+        this.poids = poids;
     }
-    public boolean getPolyarticulaire()
-    {
-        return polyarticulaire;
+
+    public int getPoids() {
+        return poids;
     }
+
 
     public ExerciceForce()
     {
         super();
-        setPolyarticulaire(false);
+        setPoids(0);
     }
-    public ExerciceForce(String n , String m , int sc , int tps , boolean poly )
+    public ExerciceForce(String n , String m , int sc , int tps , int pds )
     {
         super( n ,  m , sc , tps);
-        setPolyarticulaire(poly);
+        setPoids(pds);
     }
 
     @Override
     public String toString() {
         String tmp = super.toString();
-        if(polyarticulaire==true) return tmp+", polyarticulaire" ;
-
-        return tmp+", mono-articulaire" ;
+        return tmp+"," + getPoids() ;
 
     }
     public boolean Equals(Exercice obj)
@@ -44,9 +43,9 @@ public class ExerciceForce extends Exercice {
         ExerciceForce O1 = new ExerciceForce();
         System.out.println(O1); // appele toString pour fonctionner
         System.out.println("--Creation d'un objet grace precis");
-        ExerciceForce O2 = new ExerciceForce("developpé couché","pectoraux",3,0,true);
+        ExerciceForce O2 = new ExerciceForce("developpé couché","pectoraux",3,0,1);
         System.out.println(O2);
-        ExerciceForce O3 = new ExerciceForce("developpé couché","pectoraux",5,20, false) ;
+        ExerciceForce O3 = new ExerciceForce("developpé couché","pectoraux",5,20, 2) ;
         System.out.println(O3);
         System.out.println("--utilisation du Equals");
         System.out.println(O2.Equals(O3));
