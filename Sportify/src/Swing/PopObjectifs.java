@@ -49,7 +49,7 @@ public class PopObjectifs extends JDialog {
         // add your code here
         dispose();
         //Test Romain
-        Objectif obj = new Objectif() ;
+        //Objectif obj = new Objectif() ;
 
         //Romain fin
     }
