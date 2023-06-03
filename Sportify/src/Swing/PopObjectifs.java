@@ -27,7 +27,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
-        //textFieldDate.setText("dd/mm/yyyy");
+        textFieldDate.setText("dd/mm/yyyy");
         ButtonGroup buttonGroup = new ButtonGroup();
         buttonGroup.add(cardioRadioButton);
         buttonGroup.add(forceRadioButton);
@@ -35,6 +35,10 @@ public class PopObjectifs extends JDialog implements ActionListener{
 
         buttonOK.addActionListener(this);
         buttonCancel.addActionListener(this);
+
+        setTitle("Ajout objectif");
+        setSize(600,300);
+        setVisible(true);
     }
 
     private void onOK() {
@@ -51,7 +55,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
             float temps = Float.parseFloat(texte);
             ObjectifCardio O1 = new ObjectifCardio(textfieldIntitulé.getText(),textFieldDate.getText(),temps);
             System.out.println(O1);
-            Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
+            Utilisateur.getInstance().ajouterObjectif( O1 );
         } else
             if (forceRadioButton.isSelected())
             {
@@ -59,7 +63,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
                 float poids = Float.parseFloat(texte2);
                 ObjectifForce O1 = new ObjectifForce(textfieldIntitulé.getText(),textFieldDate.getText(),poids);
                 System.out.println(O1);
-                Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
+                Utilisateur.getInstance().ajouterObjectif( O1 );
             }
             else
             {
@@ -69,7 +73,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
                     float poidssouhaite = Float.parseFloat(texte3);
                     ObjectifPoids O1 = new ObjectifPoids(textfieldIntitulé.getText(),textFieldDate.getText(),poidssouhaite);
                     System.out.println(O1);
-                    Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
+                    Utilisateur.getInstance().ajouterObjectif(O1 );
                 }
             }
         dispose();

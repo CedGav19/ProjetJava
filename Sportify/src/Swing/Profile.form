@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Swing.Profile">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="748" height="519"/>
@@ -18,7 +18,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="5588d" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="5588d" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="5" left="5" bottom="5" right="5"/>
             <constraints>
               <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -34,7 +34,7 @@
             <children>
               <hspacer id="4042d">
                 <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
               </hspacer>
               <component id="93767" class="javax.swing.JLabel">
@@ -45,10 +45,10 @@
                   <text value="Votre profile"/>
                 </properties>
               </component>
-              <grid id="2b0f" layout-manager="GridLayoutManager" row-count="10" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="2b0f" layout-manager="GridLayoutManager" row-count="6" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="line">
@@ -65,12 +65,12 @@
                   </component>
                   <vspacer id="4926">
                     <constraints>
-                      <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                      <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                     </constraints>
                   </vspacer>
-                  <component id="4efd8" class="javax.swing.JTextArea" binding="demontyTextArea" default-binding="true">
+                  <component id="4efd8" class="javax.swing.JTextArea" binding="fieldPrenom">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <minimum-size width="-1" height="30"/>
                         <preferred-size width="-1" height="30"/>
                         <maximum-size width="-1" height="30"/>
@@ -82,15 +82,15 @@
                   </component>
                   <component id="7010a" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Prenom:"/>
                     </properties>
                   </component>
-                  <component id="705fb" class="javax.swing.JTextArea" binding="romainTextArea" default-binding="true">
+                  <component id="705fb" class="javax.swing.JTextArea" binding="fieldNom">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                      <grid row="3" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                         <minimum-size width="-1" height="30"/>
                         <preferred-size width="-1" height="30"/>
                         <maximum-size width="-1" height="30"/>
@@ -100,60 +100,17 @@
                       <text value="Romain"/>
                     </properties>
                   </component>
-                  <component id="aeb96" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Mot de passe:"/>
-                    </properties>
-                  </component>
-                  <component id="33eeb" class="javax.swing.JPasswordField" binding="test12PasswordField" default-binding="true">
-                    <constraints>
-                      <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="-1"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <text value="Test12"/>
-                    </properties>
-                  </component>
                   <component id="fef64" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Poids:"/>
                     </properties>
                   </component>
-                  <component id="a1e2b" class="javax.swing.JLabel">
+                  <component id="62d68" class="javax.swing.JSpinner" binding="poids">
                     <constraints>
-                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Proteine/Kg:"/>
-                    </properties>
-                  </component>
-                  <component id="37d7a" class="javax.swing.JSlider" binding="slider1" custom-create="true" default-binding="true">
-                    <constraints>
-                      <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                        <minimum-size width="150" height="-1"/>
-                        <preferred-size width="150" height="-1"/>
-                        <maximum-size width="150" height="-1"/>
-                      </grid>
-                    </constraints>
-                    <properties>
-                      <maximum value="2"/>
-                      <paintLabels value="false"/>
-                      <paintTicks value="false"/>
-                      <snapToTicks value="false"/>
-                      <value value="1"/>
-                      <valueIsAdjusting value="true"/>
-                    </properties>
-                  </component>
-                  <component id="a892a" class="javax.swing.JSpinner" binding="spinner2" default-binding="true">
-                    <constraints>
-                      <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="50" height="-1"/>
                         <preferred-size width="50" height="-1"/>
                         <maximum-size width="50" height="-1"/>
@@ -163,15 +120,15 @@
                   </component>
                   <component id="87ea3" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Taille:"/>
                     </properties>
                   </component>
-                  <component id="62d68" class="javax.swing.JSpinner" binding="spinner1" default-binding="true">
+                  <component id="a892a" class="javax.swing.JSpinner" binding="taille">
                     <constraints>
-                      <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                      <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
                         <minimum-size width="50" height="-1"/>
                         <preferred-size width="50" height="-1"/>
                         <maximum-size width="50" height="-1"/>
@@ -179,24 +136,19 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="7ae9f" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="1"/>
-                    </properties>
-                  </component>
-                  <hspacer id="317ee">
-                    <constraints>
-                      <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                  </hspacer>
                 </children>
               </grid>
+              <component id="fec2" class="javax.swing.JLabel" binding="ChampErreur">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Bienvenue sur votre profil ! "/>
+                </properties>
+              </component>
               <component id="e58ae" class="javax.swing.JButton" binding="modifierButton" default-binding="true">
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-607633"/>
@@ -240,7 +192,7 @@
               </component>
             </children>
           </grid>
-          <grid id="79bb3" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="79bb3" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="5" left="5" bottom="5" right="5"/>
             <constraints>
               <grid row="2" column="4" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -254,15 +206,10 @@
               <color color="-607633"/>
             </border>
             <children>
-              <hspacer id="e628c">
-                <constraints>
-                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </hspacer>
               <grid id="8bc9" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="line"/>
@@ -275,7 +222,7 @@
                       <text value="Objectifs à réaliser : "/>
                     </properties>
                   </component>
-                  <grid id="e62e7" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="e62e7" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -283,7 +230,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="f5d11" class="javax.swing.JButton" binding="button1" default-binding="true">
+                      <component id="f5d11" class="javax.swing.JButton" binding="buttonplusobj">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <minimum-size width="50" height="30"/>
@@ -296,22 +243,9 @@
                           <text value="+"/>
                         </properties>
                       </component>
-                      <component id="6cfb6" class="javax.swing.JButton" binding="modifButton" default-binding="true">
+                      <component id="61936" class="javax.swing.JButton" binding="buttonmoinobj">
                         <constraints>
                           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                            <minimum-size width="70" height="30"/>
-                            <preferred-size width="70" height="30"/>
-                            <maximum-size width="70" height="30"/>
-                          </grid>
-                        </constraints>
-                        <properties>
-                          <background color="-607633"/>
-                          <text value="Modif"/>
-                        </properties>
-                      </component>
-                      <component id="61936" class="javax.swing.JButton" binding="button3" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <minimum-size width="50" height="30"/>
                             <preferred-size width="50" height="30"/>
                             <maximum-size width="50" height="30"/>
@@ -324,125 +258,20 @@
                       </component>
                     </children>
                   </grid>
-                  <scrollpane id="2a3f7">
+                  <scrollpane id="2a3f7" binding="ScrollPanelObjAreal">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
-                    <children>
-                      <grid id="9b195" layout-manager="GridLayoutManager" row-count="13" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                        <margin top="0" left="0" bottom="0" right="0"/>
-                        <constraints/>
-                        <properties/>
-                        <border type="none"/>
-                        <children>
-                          <component id="711c6" class="javax.swing.JCheckBox" binding="courseCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Course"/>
-                            </properties>
-                          </component>
-                          <component id="1333f" class="javax.swing.JCheckBox" binding="courirUneHeureCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="d30df" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="9355" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Soulever de terre"/>
-                            </properties>
-                          </component>
-                          <component id="b49ab" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="450d0" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="8b84b" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="1d400" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="59b57" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="78d71" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="1c021" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="9b852" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                        </children>
-                      </grid>
-                    </children>
+                    <children/>
                   </scrollpane>
                 </children>
               </grid>
               <grid id="f6a37" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="2" column="0" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties/>
                 <border type="line"/>
@@ -455,7 +284,7 @@
                       <text value="Objectifs faits : "/>
                     </properties>
                   </component>
-                  <grid id="9788b" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                  <grid id="9788b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints>
                       <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -463,35 +292,9 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="c8d65" class="javax.swing.JButton" default-binding="true">
+                      <component id="3d752" class="javax.swing.JButton" binding="butonmoinsobjfait">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                            <minimum-size width="50" height="30"/>
-                            <preferred-size width="50" height="30"/>
-                            <maximum-size width="50" height="30"/>
-                          </grid>
-                        </constraints>
-                        <properties>
-                          <background color="-607633"/>
-                          <text value="+"/>
-                        </properties>
-                      </component>
-                      <component id="dac5" class="javax.swing.JButton" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                            <minimum-size width="70" height="30"/>
-                            <preferred-size width="70" height="30"/>
-                            <maximum-size width="70" height="30"/>
-                          </grid>
-                        </constraints>
-                        <properties>
-                          <background color="-607633"/>
-                          <text value="Modif"/>
-                        </properties>
-                      </component>
-                      <component id="3d752" class="javax.swing.JButton" default-binding="true">
-                        <constraints>
-                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                             <minimum-size width="50" height="30"/>
                             <preferred-size width="50" height="30"/>
                             <maximum-size width="50" height="30"/>
@@ -504,131 +307,16 @@
                       </component>
                     </children>
                   </grid>
-                  <scrollpane id="78bed">
+                  <scrollpane id="78bed" binding="ScrolpanelOjectifRealise">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                     <border type="none"/>
-                    <children>
-                      <grid id="1100c" layout-manager="GridLayoutManager" row-count="13" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                        <margin top="0" left="0" bottom="0" right="0"/>
-                        <constraints/>
-                        <properties/>
-                        <border type="none"/>
-                        <children>
-                          <component id="cf6ff" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Course"/>
-                            </properties>
-                          </component>
-                          <component id="eb6af" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="f7604" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="8d424" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Soulever de terre"/>
-                            </properties>
-                          </component>
-                          <component id="4cc35" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="7a094" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="958ce" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="85b33" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="1e8ab" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="125ad" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                          <component id="b0dc1" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Perdre 5 kg"/>
-                            </properties>
-                          </component>
-                          <component id="81fad" class="javax.swing.JCheckBox" default-binding="true">
-                            <constraints>
-                              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Courir une heure"/>
-                            </properties>
-                          </component>
-                        </children>
-                      </grid>
-                    </children>
+                    <children/>
                   </scrollpane>
                 </children>
               </grid>
-              <hspacer id="d3ca">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </hspacer>
-              <hspacer id="78af2">
-                <constraints>
-                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </hspacer>
               <component id="aa458" class="javax.swing.JButton" binding="faitButton" default-binding="true">
                 <constraints>
                   <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -640,7 +328,7 @@
               </component>
               <component id="b09b1" class="javax.swing.JButton" binding="pasFaitButton" default-binding="true">
                 <constraints>
-                  <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-607633"/>

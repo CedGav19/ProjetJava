@@ -6,6 +6,7 @@ import ExercicesClass.ExerciceCardio;
 import ExercicesClass.ExerciceForce;
 import ExercicesClass.Seance;
 import Objectifs.Objectif;
+import Objectifs.ObjectifCardio;
 
 import javax.naming.directory.SearchControls;
 import java.io.FileReader;
@@ -16,7 +17,24 @@ import java.util.ArrayList;
 
 public class Utilisateur {
 
-    //region vaiable et set/get
+    //region variable et set/get
+
+    private String nomUtilisateur;
+    public void setNomUtilisateur(String nom){this.nomUtilisateur = nom;}
+    public String getNomUtilisateur(){return nomUtilisateur;}
+
+    private String prenomUtilisateur;
+    public void setPrenomUtilisateur(String prenom){this.prenomUtilisateur = prenom;}
+    public String getPrenomUtilisateur(){return prenomUtilisateur;}
+
+    private int poidsUtilisateur;
+    public void setPoidsUtilisateur(int poidsUtil){this.poidsUtilisateur = poidsUtil;}
+    public int getPoidsUtilisateur(){return poidsUtilisateur;}
+
+    private int tailleUtilisateur;
+    public void setTailleUtilisateur(int tailleUtil){this.tailleUtilisateur = tailleUtil;}
+    public int getTailleUtilisateur(){return tailleUtilisateur;}
+
     private static Utilisateur instance = new Utilisateur() ;
 
     //
@@ -201,7 +219,13 @@ public class Utilisateur {
         mesSeances = new ArrayList<Seance>();
         //Test Romain
         mesObjectifs = new ArrayList<Objectif>();
+        ObjectifCardio o = new ObjectifCardio("Test","Test",5);
+        ajouterObjectif(o);
+        ObjectifCardio o1 = new ObjectifCardio("TestA","TestA",6);
+        ajouterObjectif(o1);
         mesObjectifsReussis = new ArrayList<Objectif>();
+        ObjectifCardio o3 = new ObjectifCardio("TestA","TestA",6);
+        ajouterObjectifReussis(o3);
         //Fin test Romain
 
 

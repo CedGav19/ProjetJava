@@ -45,7 +45,7 @@ public class ObjectifCardio extends Objectif {
 
     @Override
     public String toString() {
-        return super.toString() + "temps:" + temps;
+        return "Intitulé: " + getNom() + " ,temps: " + temps + "minutes, date :" + getDateSouhaite();
     }
 
     @Override

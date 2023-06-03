@@ -34,7 +34,7 @@ public class Alimentation extends JFrame  implements ActionListener{
 
        // getRootPane().setDefaultButton(ButtonAjoutAliments); designe un bouton par defaut ou le curseur se trouvera
         // parties Aliments
-       JPanel PanelAliments = new JPanel();
+        JPanel PanelAliments = new JPanel();
         PanelAliments.setLayout(new GridLayout(0, 1));
         for (int i = 0 ; i<Utilisateur.getInstance().getListeAliments().size();i++)
         {
