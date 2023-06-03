@@ -4,34 +4,37 @@ import ExercicesClass.Exercice;
 import ExercicesClass.ExerciceForce;
 
 public class ObjectifForce extends Objectif {
-    private ExerciceForce ex ;
+    //private ExerciceForce ex ;
     private float poids ;
 
     public ObjectifForce()
     {
         super();
-        ex = new ExerciceForce();
+        //ex = new ExerciceForce();
         poids = 0 ;
     }
-    public ObjectifForce(String n , String d ,ExerciceForce E, float p)
+    public ObjectifForce(String n , String d /*,ExerciceForce E*/, float p)
     {
         super(n,d);
         setPoids(p);
-        setEx(E);
+        //setEx(E);
     }
 
-
+    /*
     public void setEx(ExerciceForce ex) {
         this.ex = ex;
     }
+    */
 
     public void setPoids(float poids) {
         this.poids = poids;
     }
 
+    /*
     public Exercice getEx() {
         return ex;
     }
+    */
 
     public float getPoids() {
         return poids;
@@ -39,14 +42,15 @@ public class ObjectifForce extends Objectif {
 
     @Override
     public String toString() {
-        return "ObjectifForce{" +
-                "ex=" + ex.getNom() +
+        return "ObjectifForce{" /*+
+                "ex=" + ex.getNom()*/ +
                 ", poids=" + poids +
                 '}';
     }
 
     public static void main(String[] args) {
 
+         /*
         System.out.println("--Creation d'un objet grace au constructeur par defaut");
         ObjectifForce O1 = new ObjectifForce();
         System.out.println(O1); // appele toString pour fonctionner
@@ -59,6 +63,7 @@ public class ObjectifForce extends Objectif {
         System.out.println("--utilisation du Equals");
         System.out.println(" entre objet 2 et 3 : "+O2.Equals(O3));
         System.out.println("entre objet 2 et 1 : " +O2.Equals(O1));
+          */
     }
 
 }

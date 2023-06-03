@@ -1,6 +1,9 @@
 package Swing;
 
 import Objectifs.Objectif;
+import Objectifs.ObjectifCardio;
+import Objectifs.ObjectifForce;
+import Objectifs.ObjectifPoids;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -12,9 +15,9 @@ public class PopObjectifs extends JDialog {
     private JRadioButton cardioRadioButton;
     private JRadioButton forceRadioButton;
     private JRadioButton poidsRadioButton;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
+    private JTextField textFieldcardio;
+    private JTextField textFieldforce;
+    private JTextField textFieldpoids;
     private JTextField textField;
     private JFormattedTextField formattedTextField1;
     private JTextField textfieldIntitulé;
@@ -25,7 +28,11 @@ public class PopObjectifs extends JDialog {
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
-        textFieldDate.setText("dd/mm/yyyy");
+        //textFieldDate.setText("dd/mm/yyyy");
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(cardioRadioButton);
+        buttonGroup.add(forceRadioButton);
+        buttonGroup.add(poidsRadioButton);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -62,11 +69,29 @@ public class PopObjectifs extends JDialog {
         String Format = "dd/MM/yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(Format);
         */
-
-        //Test Romain
-       // Objectif O1 = new Objectif(textfieldIntitulé.getText(),textFieldDate.getText());
-      //  System.out.println(O1);
-        //Romain fin
+        // Vérification du bouton radio sélectionné
+        if (cardioRadioButton.isSelected())
+        {
+            String texte = textFieldcardio.getText();
+            float temps = Float.parseFloat(texte);
+            ObjectifCardio O1 = new ObjectifCardio(textfieldIntitulé.getText(),textFieldDate.getText(),temps);
+        } else
+            if (forceRadioButton.isSelected())
+            {
+                String texte2 = textFieldforce.getText();
+                float poids = Float.parseFloat(texte2);
+                ObjectifForce O1 = new ObjectifForce(textfieldIntitulé.getText(),textFieldDate.getText(),poids);
+            }
+            else
+            {
+                if (poidsRadioButton.isSelected())
+                {
+                    String texte3 = textFieldcardio.getText();
+                    float poidssouhaite = Float.parseFloat(texte3);
+                    ObjectifPoids O1 = new ObjectifPoids(textfieldIntitulé.getText(),textFieldDate.getText(),poidssouhaite);
+                }
+            }
+        //System.out.println(O1);
         dispose();
     }
 
