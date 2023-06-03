@@ -4,6 +4,7 @@ import Objectifs.Objectif;
 import Objectifs.ObjectifCardio;
 import Objectifs.ObjectifForce;
 import Objectifs.ObjectifPoids;
+import Singleton.Utilisateur;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -18,10 +19,6 @@ public class PopObjectifs extends JDialog implements ActionListener{
     private JTextField textFieldcardio;
     private JTextField textFieldforce;
     private JTextField textFieldpoids;
-    private JTextField textField;
-    private JFormattedTextField formattedTextField1;
-    private JTextField textField3;
-    private JTextField textField4;
     private JTextField textfieldIntitulé;
     private JFormattedTextField textFieldDate;
 
@@ -66,10 +63,11 @@ public class PopObjectifs extends JDialog implements ActionListener{
             {
                 if (poidsRadioButton.isSelected())
                 {
-                    String texte3 = textFieldcardio.getText();
+                    String texte3 = textFieldpoids.getText();
                     float poidssouhaite = Float.parseFloat(texte3);
                     ObjectifPoids O1 = new ObjectifPoids(textfieldIntitulé.getText(),textFieldDate.getText(),poidssouhaite);
                     System.out.println(O1);
+                    Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
                 }
             }
         dispose();

@@ -112,18 +112,14 @@ public class Utilisateur {
     public ArrayList<Objectif> getMesObjectifs() {
         return mesObjectifs;
     }
+    public void ajouterObjectif(Objectif o) {
+        mesObjectifs.add(o);
+    }
     public ArrayList<Objectif> getMesObjectifsReussis() {
         return mesObjectifsReussis;
     }
-    //fin Romain test
-
-    /*
     public void ajouterObjectifReussis(Objectif o) {
         mesObjectifsReussis.add(o);
-    }
-
-    public void ajouterObjectif(Objectif o) {
-        mesObjectifs.add(o);
     }
 
     public void validerObjectif(Objectif O) {
@@ -131,7 +127,7 @@ public class Utilisateur {
             mesObjectifs.remove(O);
             mesObjectifsReussis.add(O);
         }
-    }*/
+    }
 
 
 
