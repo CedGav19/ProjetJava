@@ -86,14 +86,13 @@ Dans AjoutSeance :  -       implementer les exercices dans le scrollpane
    CEDRIC  (FAIT  LE 21/05)
    AjoutPlat mange  :  comnobox qui liste tous les recettes  + boutons ok
    
-   CEDRIC 
-   
+   CEDRIC
    popExercice  :  - implementer formulaire 
                            pour type de muscle faire un combobox ( dos , pec , biceps , tricpes , jambe ) 
                          - pour le temps ,si pas coche , constructeur sans le temps , si non on prend le temps 
                          - si force , on construit un exerciceForce , si non ExerciceCardio
                         - bouton ok ajoute dans la liste des exercies et sauvegarde 
-   ROMAIN
+   ROMAIN(FAIT le 3/06 2023)
    PopObjectifs : - impleter formulaire 
    
    
