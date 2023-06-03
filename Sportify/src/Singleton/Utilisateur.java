@@ -115,11 +115,17 @@ public class Utilisateur {
     public void ajouterObjectif(Objectif o) {
         mesObjectifs.add(o);
     }
+    public void removeObjectif(Objectif o){
+        mesObjectifs.remove(o);
+    }
     public ArrayList<Objectif> getMesObjectifsReussis() {
         return mesObjectifsReussis;
     }
     public void ajouterObjectifReussis(Objectif o) {
         mesObjectifsReussis.add(o);
+    }
+    public void removeObjectifReussis(Objectif o) {
+        mesObjectifsReussis.remove(o);
     }
 
     public void validerObjectif(Objectif O) {
@@ -128,10 +134,6 @@ public class Utilisateur {
             mesObjectifsReussis.add(O);
         }
     }
-
-
-
-
 
      private void loadAlimentsCSV()
      {

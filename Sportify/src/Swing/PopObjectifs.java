@@ -51,6 +51,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
             float temps = Float.parseFloat(texte);
             ObjectifCardio O1 = new ObjectifCardio(textfieldIntitulé.getText(),textFieldDate.getText(),temps);
             System.out.println(O1);
+            Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
         } else
             if (forceRadioButton.isSelected())
             {
@@ -58,6 +59,7 @@ public class PopObjectifs extends JDialog implements ActionListener{
                 float poids = Float.parseFloat(texte2);
                 ObjectifForce O1 = new ObjectifForce(textfieldIntitulé.getText(),textFieldDate.getText(),poids);
                 System.out.println(O1);
+                Utilisateur.getInstance().ajouterObjectif( (Objectif)O1 );
             }
             else
             {

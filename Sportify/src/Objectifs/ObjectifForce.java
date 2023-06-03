@@ -42,10 +42,7 @@ public class ObjectifForce extends Objectif {
 
     @Override
     public String toString() {
-        return "ObjectifForce{" /*+
-                "ex=" + ex.getNom()*/ +
-                ", poids=" + poids +
-                '}';
+        return "ObjectifForce{ Intitulé:" + getNom() + ",DateSouhaitée" + getDateSouhaite() + ",PoidsASoulever" + poids +'}';
     }
 
     public static void main(String[] args) {
