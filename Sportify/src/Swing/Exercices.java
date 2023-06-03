@@ -56,7 +56,7 @@ public class Exercices extends JFrame implements ActionListener {
         {
             PanelSeance.add(new JCheckBox(Utilisateur.getInstance().getMesSeances().get(i).toString()));
         }
-        ScrollpaneExForce.setViewportView(PanelSeance);
+        ScrollPaneSeance.setViewportView(PanelSeance);
         buttonRemoveSeance.addActionListener(this);
         buttonAddseance.addActionListener(this);
 
@@ -123,12 +123,12 @@ public class Exercices extends JFrame implements ActionListener {
 
     private void onAddSeance()
     {
-        int tmp = Utilisateur.getInstance().getListeAliments().size();
+        int tmp = Utilisateur.getInstance().getMesSeances().size();
         AjoutSeance PAS= new AjoutSeance();
-        if(tmp<Utilisateur.getInstance().getListeAliments().size())
+        if(tmp<Utilisateur.getInstance().getMesSeances().size())
         {
             JPanel tmpPanel = (JPanel)ScrollPaneSeance.getViewport().getView() ;
-            tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getListeAliments().get(tmp).toString()));
+            tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getMesSeances().get(tmp).toString()));
         }
     }
     private void onRemoveSeance(){

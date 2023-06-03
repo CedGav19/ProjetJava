@@ -4,7 +4,17 @@ import java.util.ArrayList;
 
 public class Seance {
 
+    private String nom ;
+
     private ArrayList<Exercice> vecExercices ;
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
 
     public ArrayList<Exercice> getVecExercices() {
         return vecExercices;
@@ -93,9 +103,7 @@ public class Seance {
 
     @Override
     public String toString() {
-        return "Seance{" +
-                "vecExercices=" + vecExercices +
-                '}';
+        return getNom();
     }
 
     public static void main(String[] args) {

@@ -1,54 +1,86 @@
 package Swing;
 
-import javax.swing.*;
-import java.awt.event.*;
+import ExercicesClass.Seance;
+import Singleton.Utilisateur;
 
-public class AjoutSeance extends JDialog {
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class AjoutSeance extends JDialog implements ActionListener {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JFormattedTextField formattedTextField1;
-    private JTextField textField2;
-    private JSpinner spinner1;
-    private JTextField textField1;
-    private JCheckBox courseCheckBox;
-    private JCheckBox courirUneHeureCheckBox;
+    private JTextField textNom;
+    private JScrollPane scrollPaneExerciceForce;
+    private JScrollPane scrollPaneExerciceCardio;
 
     public AjoutSeance() {
         setContentPane(contentPane);
+
+        JPanel PanelForce = new JPanel();
+        PanelForce.setLayout(new GridLayout(0, 1));
+        for (int i = 0; i< Utilisateur.getInstance().getExercicesForce().size(); i++)
+        {
+            PanelForce.add(new JCheckBox(Utilisateur.getInstance().getExercicesForce().get(i).toString()));
+        }
+        scrollPaneExerciceForce.setViewportView(PanelForce);
+
+        JPanel PanelCardio = new JPanel();
+        PanelCardio.setLayout(new GridLayout(0, 1));
+        for (int i = 0; i< Utilisateur.getInstance().getListeExercicesCardio().size(); i++)
+        {
+            PanelCardio.add(new JCheckBox(Utilisateur.getInstance().getListeExercicesCardio().get(i).toString()));
+        }
+        scrollPaneExerciceCardio.setViewportView(PanelCardio);
+
+        buttonCancel.addActionListener(this);
+        buttonOK.addActionListener(this);
         setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
-
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
-
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() when cross is clicked
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        pack();
+        setVisible(true);
     }
 
     private void onOK() {
-        // add your code here
+
+        Seance maSeance = new Seance();
+        maSeance.setNom(textNom.getText());
+        JPanel tmpPanel = (JPanel) scrollPaneExerciceForce.getViewport().getView();
+        for (Component c : tmpPanel.getComponents()) {
+            if (c instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) c;
+                if (checkBox.isSelected()) {
+
+                    for (int i = 0; i < Utilisateur.getInstance().getExercicesForce().size(); i++) {
+                        if (checkBox.getText().equals(Utilisateur.getInstance().getExercicesForce().get(i).toString())) {
+                            maSeance.ajouterExercice(Utilisateur.getInstance().getExercicesForce().get(i));
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        JPanel tmpPanel2 = (JPanel) scrollPaneExerciceForce.getViewport().getView();
+        for (Component c : tmpPanel2.getComponents()) {
+            if (c instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) c;
+                if (checkBox.isSelected()) {
+
+                    for (int i = 0; i < Utilisateur.getInstance().getListeExercicesCardio().size(); i++) {
+                        if (checkBox.getText().equals(Utilisateur.getInstance().getListeExercicesCardio().get(i).toString())) {
+                            maSeance.ajouterExercice(Utilisateur.getInstance().getListeExercicesCardio().get(i));
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+        Utilisateur.getInstance().addSeance(maSeance);
         dispose();
     }
 
@@ -63,4 +95,11 @@ public class AjoutSeance extends JDialog {
         dialog.setVisible(true);
         System.exit(0);
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==buttonCancel)onCancel();
+        if(e.getSource()==buttonOK)onOK();
+    }
+
 }
