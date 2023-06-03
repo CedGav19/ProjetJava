@@ -3,7 +3,7 @@ package Swing;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AjoutSéance extends JDialog {
+public class AjoutSeance extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
@@ -14,7 +14,7 @@ public class AjoutSéance extends JDialog {
     private JCheckBox courseCheckBox;
     private JCheckBox courirUneHeureCheckBox;
 
-    public AjoutSéance() {
+    public AjoutSeance() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -58,7 +58,7 @@ public class AjoutSéance extends JDialog {
     }
 
     public static void main(String[] args) {
-        AjoutSéance dialog = new AjoutSéance();
+        AjoutSeance dialog = new AjoutSeance();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
