@@ -24,7 +24,7 @@ public class ObjectifPoids extends Objectif{
 
     @Override
     public String toString() {
-        return "Intitulé: " + getNom() + " ,poids à atteindre: " + poidsSouhaite + "kg, date :" + getDateSouhaite();
+        return getNom() + " ,poids à atteindre: " + poidsSouhaite + "kg, date :" + getDateSouhaite();
     }
 
     @Override

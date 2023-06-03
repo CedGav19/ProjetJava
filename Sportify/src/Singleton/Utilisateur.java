@@ -153,6 +153,13 @@ public class Utilisateur {
         }
     }
 
+    public void devaliderObjectif(Objectif O) {
+        if (mesObjectifsReussis.contains(O)) {
+            mesObjectifsReussis.remove(O);
+            mesObjectifs.add(O);
+        }
+    }
+
      private void loadAlimentsCSV()
      {
 

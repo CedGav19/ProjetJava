@@ -151,12 +151,45 @@ public class Profile extends  JFrame implements ActionListener {
         }
     }
 
+    private void changerpasfait(){
+        JPanel tmpPanel = (JPanel) ScrolpanelOjectifRealise.getViewport().getView();
+        for (Component c : tmpPanel.getComponents()) {
+            if (c instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) c;
+                if (checkBox.isSelected()) {
+
+                    for (int i = 0; i < Utilisateur.getInstance().getMesObjectifsReussis().size(); i++) {
+                        if (checkBox.getText().equals(Utilisateur.getInstance().getMesObjectifsReussis().get(i).toString())) {
+                            /*Test2*/
+                            Utilisateur.getInstance().devaliderObjectif(Utilisateur.getInstance().getMesObjectifsReussis().get(i));
+                            JPanel tmpPanel1 = (JPanel)ScrollPanelObjAreal.getViewport().getView() ;
+                            int j = Utilisateur.getInstance().getMesObjectifs().size()-1;
+                            //TEst
+                            System.out.println(Utilisateur.getInstance().getMesObjectifs().get(j));
+
+                            tmpPanel1.add(new JCheckBox(Utilisateur.getInstance().getMesObjectifs().get(j).toString()));
+
+                            tmpPanel.remove(checkBox);
+                            ScrollPanelObjAreal.repaint();
+                            ScrollPanelObjAreal.revalidate();
+                            ScrolpanelOjectifRealise.repaint();
+                            ScrolpanelOjectifRealise.revalidate();
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==buttonplusobj)onAddObjectif();
         if (e.getSource()==buttonmoinobj)onSupObjectifs();
+        if(e.getSource()==faitButton)changerenfait();
 
         if(e.getSource()==butonmoinsobjfait)onSupObjectifsFait();
-        if(e.getSource()==faitButton)changerenfait();
+        if(e.getSource()==pasFaitButton)changerpasfait();
+
     }
 }
