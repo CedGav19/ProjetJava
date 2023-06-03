@@ -30,7 +30,7 @@ public class PopAjoutPlatMange extends JDialog implements ActionListener {
     private void onOK() {
             System.out.println(ComboboxRecette.getSelectedIndex());
 
-            Utilisateur.getInstance().getListePlatsMange().add(Utilisateur.getInstance().getMesRecette().get(ComboboxRecette.getSelectedIndex())) ;
+            Utilisateur.getInstance().addPlatMange(Utilisateur.getInstance().getMesRecette().get(ComboboxRecette.getSelectedIndex())); ;
 
             dispose();
     }

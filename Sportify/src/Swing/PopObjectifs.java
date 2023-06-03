@@ -20,6 +20,9 @@ public class PopObjectifs extends JDialog {
     private JTextField textFieldpoids;
     private JTextField textField;
     private JFormattedTextField formattedTextField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
     private JTextField textfieldIntitulé;
     private JFormattedTextField textFieldDate;
 

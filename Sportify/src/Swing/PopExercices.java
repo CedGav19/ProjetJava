@@ -47,19 +47,20 @@ public class PopExercices extends JDialog implements ActionListener {
         if(forceRadioButton.isSelected())
         {
             ExerciceForce E = new ExerciceForce(textNom.getText(),textMuscle.getText(),(int)spinnerScore.getValue(),temps,(int)spinnerPoidsDistance.getValue());
-            Utilisateur.getInstance().getExercicesForce().add(E);
+            Utilisateur.getInstance().addExerciceForce(E);
             System.out.println("dans l'ajout d'un ex de force ");
         }
         if(cardioRadioButton.isSelected())System.out.println(("merde")); // enleve ce ;
         {
-            // creer un excardio
-           // Utilisateur.getInstance().getExercicesCario().add(E);
+            ExerciceCardio E = new ExerciceCardio(textNom.getText(),textMuscle.getText(),(int)spinnerScore.getValue(),temps,(int)spinnerPoidsDistance.getValue());
+            Utilisateur.getInstance().addExerciceCardio(E);
+            System.out.println("dans l'ajout d'un ex de cardio ");
         }
         dispose();
     }
 
     private void onCancel() {
-        // add your code here if necessary
+
         dispose();
     }
 

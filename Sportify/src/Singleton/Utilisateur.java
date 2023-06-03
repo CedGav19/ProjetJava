@@ -172,6 +172,24 @@ public class Utilisateur {
             System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
         }
     }
+
+    private void loadExerciceCardioCsv()
+    {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\ExerciceCardio.csv")) ;
+            String ligne;
+            br.readLine(); // pour passer le header du fichier csv
+            while ((ligne = br.readLine()) != null) {
+                String[] proprietes = ligne.split(",");
+                ExerciceCardio Ex = new ExerciceCardio(proprietes[0],proprietes[1],Integer.parseInt(proprietes[3]),
+                        Integer.parseInt(proprietes[2]),1);
+
+                addExerciceCardio(Ex); ;
+            }
+        } catch (IOException e) {
+            System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
+        }
+    }
     //endregion
 
 
@@ -191,6 +209,7 @@ public class Utilisateur {
 
         loadAlimentsCSV();
         loadExerciceForceCsv();
+        loadExerciceCardioCsv();
     }
 
 

@@ -34,21 +34,35 @@ public class Exercices extends JFrame implements ActionListener {
         {
             PanelForce.add(new JCheckBox(Utilisateur.getInstance().getExercicesForce().get(i).toString()));
         }
+        ScrollpaneExForce.setViewportView(PanelForce);
+
+        JPanel PanelCardio = new JPanel();
+        PanelCardio.setLayout(new GridLayout(0, 1));
+        for (int i = 0; i< Utilisateur.getInstance().getListeExercicesCardio().size(); i++)
+        {
+            PanelCardio.add(new JCheckBox(Utilisateur.getInstance().getListeExercicesCardio().get(i).toString()));
+        }
         buttonAddExercice.addActionListener(this);
         buttonRemoveExercice.addActionListener(this);
         // parties Recette
-        ScrollpaneExForce.setViewportView(PanelForce);
+        scrollpaneExCardio.setViewportView(PanelCardio);
 
     }
 
    private void onAddExercice()
    {
        int tmpEF = Utilisateur.getInstance().getExercicesForce().size();
+       int tmpEC = Utilisateur.getInstance().getListeExercicesCardio().size();
        PopExercices PE = new PopExercices();
        if(tmpEF<Utilisateur.getInstance().getExercicesForce().size())
        {
            JPanel tmpPanel = (JPanel)ScrollpaneExForce.getViewport().getView() ;
            tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getExercicesForce().get(tmpEF).toString()));
+       }
+       if(tmpEC<Utilisateur.getInstance().getListeExercicesCardio().size())
+       {
+           JPanel tmpPanel = (JPanel)scrollpaneExCardio.getViewport().getView() ;
+           tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getListeExercicesCardio().get(tmpEC).toString()));
        }
 
    }

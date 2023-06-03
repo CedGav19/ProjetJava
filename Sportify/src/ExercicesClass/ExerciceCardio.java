@@ -24,9 +24,8 @@ public class ExerciceCardio extends Exercice {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "distance=" + getDistance() +
-                '}';
+        return super.toString() + ", " + distance + " m";
+
     }
 
     public boolean Equals(Exercice obj)

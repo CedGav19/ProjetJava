@@ -62,7 +62,7 @@ public class PopAjoutPlat extends JDialog   implements ActionListener{
         }
         if(nbalim!=0 || textField1.getText()!="")
         {
-            Utilisateur.getInstance().getMesRecette().add(maRecette);
+            Utilisateur.getInstance().addRecette(maRecette);
             dispose();
         }
         else
@@ -76,7 +76,7 @@ public class PopAjoutPlat extends JDialog   implements ActionListener{
     }
 
     private void onCancel() {
-        // add your code here if necessary
+
         dispose();
     }
 
