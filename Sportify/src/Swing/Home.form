@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Swing.Home">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="contentPane" layout-manager="GridLayoutManager" row-count="3" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="20" left="20" bottom="20" right="20"/>
     <constraints>
-      <xy x="20" y="20" width="754" height="602"/>
+      <xy x="20" y="20" width="784" height="602"/>
     </constraints>
     <properties>
       <background color="-9590300"/>
@@ -24,11 +24,6 @@
           <color color="-607633"/>
         </border>
         <children>
-          <hspacer id="422a4">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
           <component id="5a184" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -75,47 +70,21 @@
                       <verticalScrollBarPolicy value="22"/>
                     </properties>
                     <border type="none"/>
-                    <children>
-                      <component id="fe7d4" class="javax.swing.JList" binding="list1" default-binding="true">
-                        <constraints/>
-                        <properties>
-                          <model>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="v"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="v"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                            <item value="v"/>
-                            <item value="Test"/>
-                            <item value="Test"/>
-                          </model>
-                        </properties>
-                      </component>
-                    </children>
+                    <children/>
                   </scrollpane>
                 </children>
               </grid>
             </children>
           </scrollpane>
+          <component id="ed703" class="javax.swing.JButton" binding="ajouterSéanceButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-607633"/>
+              <text value="Ajouter séance"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="b49db" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -289,10 +258,10 @@
           </scrollpane>
         </children>
       </grid>
-      <grid id="99f8e" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="99f8e" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="5" left="5" bottom="5" right="5"/>
         <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <minimum-size width="200" height="400"/>
             <preferred-size width="200" height="400"/>
             <maximum-size width="200" height="400"/>
@@ -303,14 +272,9 @@
           <color color="-607633"/>
         </border>
         <children>
-          <hspacer id="af259">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </hspacer>
           <component id="998c3" class="javax.swing.JButton" binding="pasFaitButton" default-binding="true">
             <constraints>
-              <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-607633"/>
@@ -336,122 +300,17 @@
               <text value="Fait"/>
             </properties>
           </component>
-          <scrollpane id="10e5b">
+          <scrollpane id="10e5b" binding="ScrollPanelObjAreal">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
-            <children>
-              <grid id="39eb6" layout-manager="GridLayoutManager" row-count="13" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints/>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="cf4ce" class="javax.swing.JCheckBox" binding="perdre5KgCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="8d8c7" class="javax.swing.JCheckBox" binding="courirUneHeureCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="88695" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="2bcea" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="8f67a" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="9c941" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="c49e9" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="f267" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="bfbca" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="2bf31" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="82a20" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="71ec2" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-            </children>
+            <children/>
           </scrollpane>
           <component id="9d049" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Objectifs à réaliser : "/>
@@ -459,124 +318,19 @@
           </component>
           <component id="626f6" class="javax.swing.JLabel">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Objectifs réalisé : "/>
             </properties>
           </component>
-          <scrollpane id="b30c4">
+          <scrollpane id="b30c4" binding="ScrolpanelOjectifRealise">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
-            <children>
-              <grid id="8610b" layout-manager="GridLayoutManager" row-count="13" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints/>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <component id="a91ff" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="244c4" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="e7241" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="a44cb" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="103e5" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="44d24" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="2c1b5" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="1fed" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="ae43e" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="748f5" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                  <component id="bd6b4" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Perdre 5 kg"/>
-                    </properties>
-                  </component>
-                  <component id="9ee12" class="javax.swing.JCheckBox" default-binding="true">
-                    <constraints>
-                      <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Courir une heure"/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-            </children>
+            <children/>
           </scrollpane>
         </children>
       </grid>
