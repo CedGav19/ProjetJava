@@ -7,14 +7,16 @@ public class Menu extends JMenuBar {
         public Menu()
         {
             super();
-            JMenu Home = new JMenu("Home");
-            JMenu Profil = new JMenu("Profil");
-            JMenu Exercice = new JMenu("Exercice");
-            JMenu Alimentation = new JMenu("Alimentation");
-            this.add(Home);
-            this.add(Profil);
-            this.add(Exercice);
-            this.add(Alimentation);
+            JMenu page = new JMenu("Page");
+            JMenuItem Home = new JMenuItem("Home");
+            JMenuItem Profil = new JMenuItem("Profil");
+            JMenuItem Exercice = new JMenuItem("Exercice");
+            JMenuItem Alimentation = new JMenuItem("Alimentation");
+            page.add(Home);
+            page.add(Profil);
+            page.add(Exercice);
+            page.add(Alimentation);
+            this.add(page);
 
 
 
