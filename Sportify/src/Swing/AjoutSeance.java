@@ -63,7 +63,7 @@ public class AjoutSeance extends JDialog implements ActionListener {
             }
         }
 
-        JPanel tmpPanel2 = (JPanel) scrollPaneExerciceForce.getViewport().getView();
+        JPanel tmpPanel2 = (JPanel) scrollPaneExerciceCardio.getViewport().getView();
         for (Component c : tmpPanel2.getComponents()) {
             if (c instanceof JCheckBox) {
                 JCheckBox checkBox = (JCheckBox) c;

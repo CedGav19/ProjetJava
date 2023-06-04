@@ -1,5 +1,7 @@
 package Swing;
 
+import ExercicesClass.Exercice;
+import ExercicesClass.Seance;
 import Singleton.Utilisateur;
 import Swing.Menu.Menu;
 
@@ -17,6 +19,7 @@ public class Exercices extends JFrame implements ActionListener {
     private JScrollPane ScrollPaneSeance;
     private JButton buttonAddseance;
     private JButton buttonRemoveSeance;
+    private JButton regarderButton;
 
 
     public static void main(String[] args) {
@@ -25,10 +28,10 @@ public class Exercices extends JFrame implements ActionListener {
 
     Exercices() {
         setContentPane(contentpane);
-       /* setVisible(true);
+        setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Exercice");
-        setSize(800, 600);*/
+        setSize(800, 600);
         Menu menubar= new Menu();
         setJMenuBar(menubar);
 
@@ -63,6 +66,7 @@ public class Exercices extends JFrame implements ActionListener {
         ScrollPaneSeance.setViewportView(PanelSeance);
         buttonRemoveSeance.addActionListener(this);
         buttonAddseance.addActionListener(this);
+        regarderButton.addActionListener(this);
 
     }
 
@@ -157,12 +161,57 @@ public class Exercices extends JFrame implements ActionListener {
         }
     }
 
+    private void onviewseance()
+    {
+        Seance maseance = null;
+        JPanel tmpPanel = (JPanel)ScrollPaneSeance.getViewport().getView() ;
+        for (Component c :tmpPanel.getComponents()) {
+            if (c instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) c;
+                if (checkBox.isSelected()) {
+
+                    for (int i = 0 ; i<Utilisateur.getInstance().getMesSeances().size();i++)
+                    {
+                        if (checkBox.getText().equals(Utilisateur.getInstance().getMesSeances().get(i).toString()))
+                        {
+                            maseance = Utilisateur.getInstance().getMesSeances().get(i);
+                        }
+                    }
+                }
+
+            }
+        }
+        if(maseance!=null)
+        {
+            JPanel P = new JPanel();
+            P.add(new JLabel("nom de la seance : " + maseance.getNom()));
+            for (Exercice ex: maseance.getVecExercices()) {
+                P.add(new JLabel(ex.getNom()));
+
+            }
+            P.setLayout(new GridLayout(0, 1));
+
+            JFrame F = new JFrame();
+            F.setSize(80, 160);
+            F.getContentPane().add(new JScrollPane(P));
+            F.setVisible(true);
+        }
+        else
+        {
+           // JOptionPane(null , "vous devez chosir une seance ", "ERROR");
+        }
+
+
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==buttonAddExercice)onAddExercice();
         if ( e.getSource()==buttonRemoveExercice)onSupExercice();
         if ( e.getSource()==buttonAddseance)onAddSeance();
         if ( e.getSource()==buttonRemoveSeance)onRemoveSeance();
+        if ( e.getSource()==regarderButton)onviewseance();
+
         this.getContentPane().repaint();
         this.getContentPane().revalidate();
     }
