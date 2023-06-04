@@ -38,7 +38,7 @@ public class Home extends JFrame implements ActionListener {
         Properties P = new Properties() ;
         try {
 
-            P.load(new FileInputStream(System.getProperty("user.dir")+"\\src\\Sportify.properties"));
+            P.load(new FileInputStream(System.getProperty("user.dir")+"\\Sportify.properties"));
             P.list(System.out);
         } catch (IOException e) {
             throw new RuntimeException(e);

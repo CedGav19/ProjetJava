@@ -36,3 +36,13 @@ ajout de la seance : Test1
 ajout de la seance : 
 ajout de la seance : 
 ajout de la seance : 
+ajout de la seance : 
+ajout de la seance : 
+ajout de la seance : popo
+suppression de la seance : 
+suppression de la seance : 
+suppression de la seance : 
+suppression de la seance : 
+suppression de la seance : popo
+suppression de la seance : Test1
+Ajout du plat mange : salade de fruit 

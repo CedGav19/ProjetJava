@@ -189,7 +189,7 @@ public class Utilisateur implements  Serializable{
      {
 
          try {
-             BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\Aliments.csv")) ;
+             BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\Aliments.csv")) ;
              String ligne;
              br.readLine(); // pour passer le header du fichier csv
              while ((ligne = br.readLine()) != null) {
@@ -206,7 +206,7 @@ public class Utilisateur implements  Serializable{
     private void loadExerciceForceCsv()
     {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\ExercicesForce.csv")) ;
+            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\ExercicesForce.csv")) ;
             String ligne;
             br.readLine(); // pour passer le header du fichier csv
             while ((ligne = br.readLine()) != null) {
@@ -224,7 +224,7 @@ public class Utilisateur implements  Serializable{
     private void loadExerciceCardioCsv()
     {
         try {
-            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\src\\ExerciceCardio.csv")) ;
+            BufferedReader br = new BufferedReader(new FileReader(System.getProperty("user.dir")+"\\ExerciceCardio.csv")) ;
             String ligne;
             br.readLine(); // pour passer le header du fichier csv
             while ((ligne = br.readLine()) != null) {
@@ -243,7 +243,7 @@ public class Utilisateur implements  Serializable{
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\src\\Sportify.txt", false);
+            FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\Sportify.txt", false);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             oos.writeObject(nomUtilisateur);
@@ -276,7 +276,7 @@ public class Utilisateur implements  Serializable{
     }
 
     public void Load() throws IOException, ClassNotFoundException {
-        File f = new File(System.getProperty("user.dir")+"\\src\\Sportify.txt");
+        File f = new File(System.getProperty("user.dir")+"\\Sportify.txt");
         if(f.exists()) {
 
             FileInputStream fis = new FileInputStream(f);

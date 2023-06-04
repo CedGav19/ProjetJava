@@ -20,7 +20,7 @@ public class LogBean implements LogListener
         try
         {
             System.out.println("dans le save du logbean ");
-            File f = new File(System.getProperty("user.dir")+"\\src\\logs.txt");
+            File f = new File(System.getProperty("user.dir")+"\\logs.txt");
             FileWriter fr;
 
             if(f.exists()) {
