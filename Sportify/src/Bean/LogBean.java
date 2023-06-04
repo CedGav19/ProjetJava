@@ -19,7 +19,7 @@ public class LogBean implements LogListener
     {
         try
         {
-            File f = new File("logsBePing.txt");
+            File f = new File("logs.txt");
             FileWriter fr;
 
             if(f.exists()) {
