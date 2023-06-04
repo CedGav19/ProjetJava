@@ -31,12 +31,15 @@ public class PopAjoutAliment extends JDialog implements ActionListener {
 
     private void onOK() {
 
+        if(textFieldnom.getText()=="")JOptionPane.showMessageDialog(null, "Veuillez donner un nom a votre aliment", "Error", JOptionPane.INFORMATION_MESSAGE);
 
-        Aliments A1 = new Aliments(textFieldnom.getText(),(int)spinnerkcal.getValue(),(int)spinnerproteine.getValue(),(int)spinnerscore.getValue());
+        else {
+            Aliments A1 = new Aliments(textFieldnom.getText(), (int) spinnerkcal.getValue(), (int) spinnerproteine.getValue(), (int) spinnerscore.getValue());
 
-        Utilisateur.getInstance().addAliment(A1);
-        System.out.println(A1);
-        dispose();
+            Utilisateur.getInstance().addAliment(A1);
+            System.out.println(A1);
+            dispose();
+        }
     }
 
     private void onCancel() {

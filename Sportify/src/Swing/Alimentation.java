@@ -2,6 +2,7 @@ package Swing;
 
 import javax.swing.*;
 import Singleton.Utilisateur;
+import Swing.Menu.Menu;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -31,6 +32,9 @@ public class Alimentation extends JFrame  implements ActionListener{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Alimentation");
         setSize(800,600);
+
+        Menu menubar= new Menu();
+        setJMenuBar(menubar);
 
        // getRootPane().setDefaultButton(ButtonAjoutAliments); designe un bouton par defaut ou le curseur se trouvera
         // parties Aliments

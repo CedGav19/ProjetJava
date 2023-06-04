@@ -2,6 +2,7 @@ package Swing;
 
 import Objectifs.Objectif;
 import Singleton.Utilisateur;
+import Swing.Menu.Menu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,6 +35,8 @@ public class Profile extends  JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Profile");
         setSize(800,600);
+        Swing.Menu.Menu menubar= new Menu();
+        setJMenuBar(menubar);
 
         ChampErreur.setText("Bienvenue sur votre profil !");
 

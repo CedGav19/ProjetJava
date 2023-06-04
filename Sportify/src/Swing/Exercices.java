@@ -1,6 +1,7 @@
 package Swing;
 
 import Singleton.Utilisateur;
+import Swing.Menu.Menu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,6 +29,8 @@ public class Exercices extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Exercice");
         setSize(800, 600);
+        Swing.Menu.Menu menubar= new Menu();
+        setJMenuBar(menubar);
 
         // partie exercicesForce
         JPanel PanelForce = new JPanel();
