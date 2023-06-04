@@ -35,6 +35,10 @@ public class Utilisateur {
     public void setTailleUtilisateur(int tailleUtil){this.tailleUtilisateur = tailleUtil;}
     public int getTailleUtilisateur(){return tailleUtilisateur;}
 
+    private Seance lastSeance;
+    public void setLastSeance(Seance s){this.lastSeance = s;}
+    public Seance getLastSeance(){return lastSeance;}
+
     private static Utilisateur instance = new Utilisateur() ;
 
     //
