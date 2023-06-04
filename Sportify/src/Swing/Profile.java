@@ -79,8 +79,6 @@ public class Profile extends  JFrame implements ActionListener {
         {
             JPanel tmpPanel = (JPanel)ScrollPanelObjAreal.getViewport().getView() ;
             tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getMesObjectifs().get(tmp).toString()));
-            ScrollPanelObjAreal.repaint();
-            ScrollPanelObjAreal.revalidate();
         }
     }
     private void onSupObjectifs() {
@@ -94,8 +92,6 @@ public class Profile extends  JFrame implements ActionListener {
                         if (checkBox.getText().equals(Utilisateur.getInstance().getMesObjectifs().get(i).toString())) {
                             Utilisateur.getInstance().getMesObjectifs().remove(Utilisateur.getInstance().getMesObjectifs().get(i));
                             tmpPanel.remove(checkBox);
-                            ScrollPanelObjAreal.repaint();
-                            ScrollPanelObjAreal.revalidate();
                         }
                     }
                 }
@@ -115,8 +111,6 @@ public class Profile extends  JFrame implements ActionListener {
                         if (checkBox.getText().equals(Utilisateur.getInstance().getMesObjectifsReussis().get(i).toString())) {
                             Utilisateur.getInstance().getMesObjectifsReussis().remove(Utilisateur.getInstance().getMesObjectifsReussis().get(i));
                             tmpPanel.remove(checkBox);
-                            ScrolpanelOjectifRealise.repaint();
-                            ScrolpanelOjectifRealise.revalidate();
                         }
                     }
                 }
@@ -142,13 +136,8 @@ public class Profile extends  JFrame implements ActionListener {
                             System.out.println(Utilisateur.getInstance().getMesObjectifsReussis().get(j));
                             //
                             tmpPanel1.add(new JCheckBox(Utilisateur.getInstance().getMesObjectifsReussis().get(j).toString()));
-                            ScrolpanelOjectifRealise.repaint();
-                            ScrolpanelOjectifRealise.revalidate();
                             //
                             tmpPanel.remove(checkBox);
-
-                            ScrollPanelObjAreal.repaint();
-                            ScrollPanelObjAreal.revalidate();
                         }
                     }
                 }
@@ -176,10 +165,6 @@ public class Profile extends  JFrame implements ActionListener {
                             tmpPanel1.add(new JCheckBox(Utilisateur.getInstance().getMesObjectifs().get(j).toString()));
 
                             tmpPanel.remove(checkBox);
-                            ScrollPanelObjAreal.repaint();
-                            ScrollPanelObjAreal.revalidate();
-                            ScrolpanelOjectifRealise.repaint();
-                            ScrolpanelOjectifRealise.revalidate();
                         }
                     }
                 }

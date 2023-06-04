@@ -67,7 +67,7 @@
           </component>
         </children>
       </grid>
-      <grid id="b49db" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="b49db" layout-manager="GridLayoutManager" row-count="8" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="5" left="5" bottom="5" right="5"/>
         <constraints>
           <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -138,6 +138,24 @@
             <border type="none"/>
             <children/>
           </scrollpane>
+          <component id="ae9e3" class="javax.swing.JButton" binding="AjoutPlatMannge">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-607633"/>
+              <text value="Ajout plat mangé"/>
+            </properties>
+          </component>
+          <component id="5a572" class="javax.swing.JButton" binding="enleverplatbutton">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-607633"/>
+              <text value="Enlever un plat"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <grid id="99f8e" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
