@@ -233,6 +233,11 @@ public class Utilisateur {
         mesObjectifsReussis = new ArrayList<Objectif>();
         ObjectifCardio o3 = new ObjectifCardio("TestA","TestA",6);
         ajouterObjectifReussis(o3);
+
+        setNomUtilisateur("Inconnu");
+        setPrenomUtilisateur("Inconnu");
+        setPoidsUtilisateur(60);
+        setTailleUtilisateur(170);
         //Fin test Romain
 
 

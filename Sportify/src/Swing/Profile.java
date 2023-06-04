@@ -1,6 +1,5 @@
 package Swing;
 
-import Objectifs.Objectif;
 import Singleton.Utilisateur;
 import Swing.Menu.Menu;
 
@@ -16,8 +15,8 @@ public class Profile extends  JFrame implements ActionListener {
     private JButton buttonplusobj;
     private JButton buttonmoinobj;
     private JButton modifierButton;
-    private JTextArea fieldPrenom;
-    private JTextArea fieldNom;
+    private JTextField fieldPrenom;
+    private JTextField fieldNom;
     private JSpinner poids;
     private JSpinner taille;
     private JLabel ChampErreur;
@@ -38,7 +37,15 @@ public class Profile extends  JFrame implements ActionListener {
         Swing.Menu.Menu menubar= new Menu();
         setJMenuBar(menubar);
 
-        ChampErreur.setText("Bienvenue sur votre profil !");
+        ChampErreur.setText("Bienvenue sur votre profil " + Utilisateur.getInstance().getNomUtilisateur().toString() + " !");
+
+        //Profile
+        fieldPrenom.setText(Utilisateur.getInstance().getPrenomUtilisateur().toString());
+        fieldNom.setText(Utilisateur.getInstance().getNomUtilisateur().toString());
+        poids.setValue(Utilisateur.getInstance().getPoidsUtilisateur());
+        taille.setValue(Utilisateur.getInstance().getTailleUtilisateur());
+        //Modifier le profile
+        modifierButton.addActionListener(this);
 
         //Partie sur les objectifs souhaité
         JPanel panelObjectifArealiser = new JPanel();
@@ -64,9 +71,6 @@ public class Profile extends  JFrame implements ActionListener {
 
         butonmoinsobjfait.addActionListener(this);
         pasFaitButton.addActionListener(this);
-
-        //Modifier le profile
-        modifierButton.addActionListener(this);
     }
 
     public void onAddObjectif(){
@@ -185,6 +189,48 @@ public class Profile extends  JFrame implements ActionListener {
         }
     }
 
+    private void modification(){
+        int error =0;
+        ChampErreur.setText("");
+        if(fieldNom.getText().length() < 1)
+        {
+            ChampErreur.setText("Nom, ");
+            error =1;
+        }
+        if(fieldPrenom.getText().length() <1)
+        {
+            ChampErreur.setText(ChampErreur.getText() + "Prenom, ");
+            error =1;
+        }
+        if((int)poids.getValue()<=0)
+        {
+            ChampErreur.setText(ChampErreur.getText() + "Poids, ");
+            error =1;
+        }
+        if((int)taille.getValue()<=0)
+        {
+            ChampErreur.setText(ChampErreur.getText() + "Taille, ");
+            error =1;
+        }
+
+        Color col;
+        if(error == 1)
+        {
+            ChampErreur.setText(ChampErreur.getText() + "Invalide !");
+            col = Color.RED;
+        }
+        else
+        {
+            Utilisateur.getInstance().setNomUtilisateur(fieldNom.getText().toString());
+            Utilisateur.getInstance().setPrenomUtilisateur(fieldPrenom.getText().toString());
+            Utilisateur.getInstance().setPoidsUtilisateur((int)poids.getValue());
+            Utilisateur.getInstance().setTailleUtilisateur((int)taille.getValue());
+            ChampErreur.setText("Bien modifié !");
+            col= Color.GREEN;
+        }
+        ChampErreur.setForeground(col);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==buttonplusobj)onAddObjectif();
@@ -193,6 +239,8 @@ public class Profile extends  JFrame implements ActionListener {
 
         if(e.getSource()==butonmoinsobjfait)onSupObjectifsFait();
         if(e.getSource()==pasFaitButton)changerpasfait();
+
+        if(e.getSource()==modifierButton)modification();
 
     }
 }
