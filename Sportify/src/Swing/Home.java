@@ -21,7 +21,7 @@ public class Home extends JFrame implements ActionListener {
     private JScrollPane ScrolpanelOjectifRealise;
     private JPanel contentPane;
     private JLabel NomDeSeance;
-    private JLabel Durée;
+    private JLabel Duree;
     private JScrollPane repasmangé;
     private JButton AjoutPlatMannge;
     private JButton enleverplatbutton;
@@ -59,6 +59,8 @@ public class Home extends JFrame implements ActionListener {
             JMenuItem menu = menubar.getMenu(0).getItem(i);
             menu.addActionListener(this);
         }
+
+        lastSeance();
 
         //Partie sur les plats mangé
         JPanel panelmange = new JPanel();
@@ -195,6 +197,12 @@ public class Home extends JFrame implements ActionListener {
 
         progressBarProt.setValue((int)(prottot/protsouhaite*100));
         progressBarCal.setValue((int)(kcaltot/kcalSouhaite*100));
+    }
+
+    private void lastSeance(){
+        NomDeSeance.setText(Utilisateur.getInstance().getLastSeance().getNom().toString());
+        Duree.setText("Durée: " + Utilisateur.getInstance().getLastSeance().tempsTotal());
+
     }
 
     private void changementdepage(JMenuItem o)
