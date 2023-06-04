@@ -25,6 +25,7 @@ public class Home extends JFrame implements ActionListener {
     private JScrollPane repasmangé;
     private JButton AjoutPlatMannge;
     private JButton enleverplatbutton;
+    private JScrollPane dernSeancescroll;
 
     public static void main(String[] args) {
         Home P = new Home();
@@ -61,6 +62,7 @@ public class Home extends JFrame implements ActionListener {
         }
 
         lastSeance();
+        ajouterSéanceButton.addActionListener(this);
 
         //Partie sur les plats mangé
         JPanel panelmange = new JPanel();
@@ -218,8 +220,24 @@ public class Home extends JFrame implements ActionListener {
 
     private void lastSeance(){
         NomDeSeance.setText(Utilisateur.getInstance().getLastSeance().getNom());
-        Duree.setText("Durée: " + Utilisateur.getInstance().getLastSeance().tempsTotal());
+        Duree.setText("Durée: " + Utilisateur.getInstance().getLastSeance().tempsTotal() + " minutes");
 
+        JPanel derseance = new JPanel();
+        derseance.setLayout(new GridLayout(0,1));
+        for( int i = 0 ; i < Utilisateur.getInstance().getLastSeance().getVecExercices().size() ; i++)
+        {
+            derseance.add(new JLabel(Utilisateur.getInstance().getLastSeance().getVecExercices().toString()));
+        }
+        dernSeancescroll.setViewportView(derseance);
+    }
+
+    public void onAddSeance(){
+        int tmp = Utilisateur.getInstance().getMesSeances().size();
+        AjoutSeance POS = new AjoutSeance();
+        if(tmp<Utilisateur.getInstance().getMesSeances().size())
+        {
+            lastSeance();
+        }
     }
 
     private void changementdepage(JMenuItem o)
@@ -248,6 +266,8 @@ public class Home extends JFrame implements ActionListener {
 
         if(e.getSource()==AjoutPlatMannge)ajoutPlat();
         if(e.getSource()==enleverplatbutton)supprimerplat();
+
+        if(e.getSource()==ajouterSéanceButton)onAddSeance();
 
         setPrgogressbar();
 

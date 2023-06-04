@@ -80,6 +80,7 @@ public class AjoutSeance extends JDialog implements ActionListener {
             }
         }
 
+        Utilisateur.getInstance().setLastSeance(maSeance);
         Utilisateur.getInstance().addSeance(maSeance);
         dispose();
     }

@@ -27,3 +27,9 @@ Ajout de la recette : riz/poulet
 Ajout du plat mange : riz/poulet
 Ajout du plat mange : riz/poulet
 Ajout du plat mange : riz/poulet
+ajout de la seance : 
+suppression de la seance : 
+ajout de la seance : test
+ajout de la seance : 
+suppression de la seance : 
+ajout de la seance : Test1
