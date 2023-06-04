@@ -12,3 +12,18 @@ Ajout de la recette : azdzad
 Ajout du plat mange : azdzad
 Ajout du plat mange : azdzad
 Ajout du plat mange : azdzad
+Validation de l'objectif : TestA ,temps: 6.0minutes, date :TestA
+Validation de l'objectif : Test ,temps: 5.0minutes, date :Test
+Ajout de la recette : salade de fruit 
+Ajout du plat mange : salade de fruit 
+Ajout du plat mange : salade de fruit 
+ajout de l'objectif : Mourir ,poids soulevé: 150.0kg, date :dd/mm/yyyy
+Suppression de l'exercice de force : Traction, Biceps, 8, 5,1
+Suppression de l'exercice de force : Planche, Abdominaux, 30, 4,1
+ajout de la seance : SBD
+Ajout de la recette : riz/poulet
+Ajout de la recette : riz/poulet
+Ajout de la recette : riz/poulet
+Ajout du plat mange : riz/poulet
+Ajout du plat mange : riz/poulet
+Ajout du plat mange : riz/poulet

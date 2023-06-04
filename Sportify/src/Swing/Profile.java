@@ -226,5 +226,7 @@ public class Profile extends  JFrame implements ActionListener {
 
         if(e.getSource()==modifierButton)modification();
 
+        this.getContentPane().repaint();
+        this.getContentPane().revalidate();
     }
 }

@@ -211,6 +211,7 @@ public class Exercices extends JFrame implements ActionListener {
         if ( e.getSource()==buttonRemoveSeance)onRemoveSeance();
         if ( e.getSource()==regarderButton)onviewseance();
 
-
+        this.getContentPane().repaint();
+        this.getContentPane().revalidate();
     }
 }

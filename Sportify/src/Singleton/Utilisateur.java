@@ -275,6 +275,40 @@ public class Utilisateur implements  Serializable{
         }
     }
 
+    public void Load() throws IOException, ClassNotFoundException {
+        File f = new File(System.getProperty("user.dir")+"\\src\\Sportify.txt");
+        if(f.exists()) {
+
+            FileInputStream fis = new FileInputStream(f);
+            ObjectInputStream oos = new ObjectInputStream(fis);
+
+            nomUtilisateur = (String)  oos.readObject();
+            prenomUtilisateur =(String)  oos.readObject();
+            poidsUtilisateur = (int) oos.readObject();
+            tailleUtilisateur = (int) oos.readObject();
+
+            lastSeance = (Seance)  oos.readObject();
+            mesRecette =(ArrayList<Recette>)  oos.readObject();
+            listeAliments = (ArrayList<Aliments>) oos.readObject();
+            listePlatsMange = (ArrayList<Recette>) oos.readObject();
+
+            listeExercicesForce = (ArrayList<ExerciceForce>)  oos.readObject();
+            listeExercicesCardio =(ArrayList<ExerciceCardio>)  oos.readObject();
+            mesSeances = (ArrayList<Seance>) oos.readObject();
+            mesObjectifsReussis = (ArrayList<Objectif>) oos.readObject();
+            mesObjectifs = (ArrayList<Objectif>) oos.readObject();
+
+
+            oos.close();
+        }
+        else
+        {
+
+        }
+    }
+
+
+
 
 
     private void LogDetected(String msg)
@@ -336,7 +370,13 @@ public class Utilisateur implements  Serializable{
         setPoidsUtilisateur(60);
         setTailleUtilisateur(170);
         //Fin test Romain
-
+        try {
+            Load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         if( listeAliments.size()==0 ) loadAlimentsCSV();
 
         if(listeExercicesForce.size()==0) loadExerciceForceCsv();
