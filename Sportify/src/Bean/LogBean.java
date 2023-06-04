@@ -5,9 +5,9 @@ import java.io.*;
 
 public class LogBean implements LogListener
 {
-    public LogBean(Utilisateur u)
+    public LogBean()
     {
-        //u.addLogListener(this);
+        Utilisateur.getInstance().addLogListener(this);
     }
 
     public void logDetected(LogEvt e)
@@ -19,7 +19,8 @@ public class LogBean implements LogListener
     {
         try
         {
-            File f = new File("logs.txt");
+            System.out.println("dans le save du logbean ");
+            File f = new File(System.getProperty("user.dir")+"\\src\\logs.txt");
             FileWriter fr;
 
             if(f.exists()) {

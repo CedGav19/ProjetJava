@@ -1,5 +1,6 @@
 package Swing;
 
+import Bean.LogBean;
 import Singleton.Utilisateur;
 import Swing.Menu.Menu;
 import javax.swing.*;
@@ -28,6 +29,10 @@ public class Home extends JFrame implements ActionListener {
     }
 
     Home(){
+        /*mise en place du dossier log a partir de la technologie JavaBean */
+        LogBean Lb = new LogBean();
+
+
         setContentPane(contentPane);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

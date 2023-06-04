@@ -1,6 +1,8 @@
 package Singleton;
 import Aliment.Aliments;
 import Aliment.Recette;
+import Bean.LogEvt;
+import Bean.LogListener;
 import ExercicesClass.Exercice;
 import ExercicesClass.ExerciceCardio;
 import ExercicesClass.ExerciceForce;
@@ -17,7 +19,7 @@ import java.util.ArrayList;
 
 public class Utilisateur {
 
-    //region variable et set/get
+    //region variable
 
     private String nomUtilisateur;
     public void setNomUtilisateur(String nom){this.nomUtilisateur = nom;}
@@ -40,6 +42,7 @@ public class Utilisateur {
     public Seance getLastSeance(){return lastSeance;}
 
     private static Utilisateur instance = new Utilisateur() ;
+    private ArrayList<LogListener> mailingListLogListeners;
 
     //
     //
@@ -58,7 +61,7 @@ public class Utilisateur {
     private  ArrayList<Objectif> mesObjectifs;
 
 
-
+    //endregion
     // Variables utiles lors des interactions
 
     public static Utilisateur getInstance() {
@@ -73,9 +76,11 @@ public class Utilisateur {
     }
     public void addRecette(Recette r){
         mesRecette.add(r);
+        LogDetected("Ajout de la recette : "+ r.toString());
     }
     public void removeRecette(Recette r){
         mesRecette.remove(r);
+        LogDetected("Suppression de la recette : "+ r.toString());
     }
 
     public ArrayList<Recette> getListePlatsMange() {
@@ -83,9 +88,11 @@ public class Utilisateur {
     }
     public void addPlatMange(Recette r){
         listePlatsMange.add(r);
+        LogDetected("Ajout du plat mange : " + r.toString());
     }
     public void removePlatMange(Recette r){
         listePlatsMange.remove(r);
+        LogDetected("Suppression de la recette : "+ r.toString());
     }
 
     public ArrayList<ExerciceForce> getExercicesForce() {
@@ -93,9 +100,11 @@ public class Utilisateur {
     }
     public void addExerciceForce(ExerciceForce r){
         listeExercicesForce.add(r);
+        LogDetected("ajout de l'exercice de force : "+ r.toString());
     }
     public void removeExerciceForce(ExerciceForce r){
         listeExercicesForce.remove(r);
+        LogDetected("Suppression de l'exercice de force : "+ r.toString());
     }
 
     public ArrayList<ExerciceCardio> getListeExercicesCardio() {
@@ -103,9 +112,11 @@ public class Utilisateur {
     }
     public void addExerciceCardio(ExerciceCardio r){
         listeExercicesCardio.add(r);
+        LogDetected("ajout de l'exercice de Cardio : "+ r.toString());
     }
     public void removeExerciceCardio(ExerciceCardio r){
         listeExercicesCardio.remove(r);
+        LogDetected("Suppression de l'exercice de cardio  : "+ r.toString());
     }
 
     public ArrayList<Seance> getMesSeances() {
@@ -113,9 +124,11 @@ public class Utilisateur {
     }
     public void addSeance(Seance r){
         mesSeances.add(r);
+        LogDetected("ajout de la seance : "+ r.toString());
     }
     public void removeSeance(Seance r){
         mesSeances.remove(r);
+        LogDetected("suppression de la seance : "+ r.toString());
     }
 
     public ArrayList<Aliments> getListeAliments() {
@@ -123,9 +136,11 @@ public class Utilisateur {
     }
     public void addAliment(Aliments r){
         listeAliments.add(r);
+        LogDetected("ajout de l'aliment : "+ r.toString());
     }
     public void removeAliment(Aliments r){
         listeAliments.remove(r);
+        LogDetected("suppression de l'aliment : "+ r.toString());
     }
 
     //
@@ -136,18 +151,22 @@ public class Utilisateur {
     }
     public void ajouterObjectif(Objectif o) {
         mesObjectifs.add(o);
+        LogDetected("ajout de l'objectif : "+ o.toString());
     }
     public void removeObjectif(Objectif o){
         mesObjectifs.remove(o);
+        LogDetected("suppresion de l'objectif : "+ o.toString());
     }
     public ArrayList<Objectif> getMesObjectifsReussis() {
         return mesObjectifsReussis;
     }
     public void ajouterObjectifReussis(Objectif o) {
         mesObjectifsReussis.add(o);
+        LogDetected("ajout de l'objectif reussis  : "+ o.toString());
     }
     public void removeObjectifReussis(Objectif o) {
         mesObjectifsReussis.remove(o);
+        LogDetected("suppression de l'objectif : "+ o.toString());
     }
 
     public void validerObjectif(Objectif O) {
@@ -155,6 +174,7 @@ public class Utilisateur {
             mesObjectifs.remove(O);
             mesObjectifsReussis.add(O);
         }
+        LogDetected("Validation de l'objectif : "+ O.toString());
     }
 
     public void devaliderObjectif(Objectif O) {
@@ -162,6 +182,7 @@ public class Utilisateur {
             mesObjectifsReussis.remove(O);
             mesObjectifs.add(O);
         }
+        LogDetected("undo de la Validation de l'objectif : "+ O.toString());
     }
 
      private void loadAlimentsCSV()
@@ -217,7 +238,38 @@ public class Utilisateur {
             System.err.println("Erreur lors de la lecture des données : " + e.getMessage());
         }
     }
+
+
+    private void LogDetected(String msg)
+    {
+
+
+        LogEvt e = new LogEvt(this, msg);
+        for(int i=0; i < mailingListLogListeners.size(); i++)
+        {
+            LogListener listener = mailingListLogListeners.get(i);
+            listener.logDetected(e);
+        }
+    }
+    public void addLogListener(LogListener listener)
+    {
+        if(!mailingListLogListeners.contains(listener))
+        {
+            mailingListLogListeners.add(listener);
+        }
+    }
+
+    public void removeLogListener(LogListener listener)
+    {
+        if(mailingListLogListeners.contains(listener))
+        {
+            mailingListLogListeners.remove(listener);
+        }
+    }
     //endregion
+
+
+
 
 
     //region constructeur
@@ -228,12 +280,9 @@ public class Utilisateur {
         listeExercicesForce = new ArrayList<ExerciceForce>();
         listeExercicesCardio = new ArrayList<ExerciceCardio>();
         mesSeances = new ArrayList<Seance>();
+        mailingListLogListeners = new ArrayList<>();
 
-        /*
-        listeAliments test = new ArrayList<Aliments>();
-        Recette r = new Recette(test,"Test");
-        addPlatMange(r);
-         */
+
 
 
         //Test Romain

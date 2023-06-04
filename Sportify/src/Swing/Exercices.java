@@ -1,5 +1,6 @@
 package Swing;
 
+import Bean.LogBean;
 import ExercicesClass.Exercice;
 import ExercicesClass.Seance;
 import Singleton.Utilisateur;
@@ -28,7 +29,6 @@ public class Exercices extends JFrame implements ActionListener {
 
     Exercices() {
         setContentPane(contentpane);
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Exercice");
         setSize(800, 600);
