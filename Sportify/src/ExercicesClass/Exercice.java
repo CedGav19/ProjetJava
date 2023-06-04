@@ -1,6 +1,8 @@
 package ExercicesClass;
 
-public  abstract class Exercice {
+import java.io.Serializable;
+
+public  abstract class Exercice implements Serializable {
 
     private String muscle;
     private int tempsEstime ;

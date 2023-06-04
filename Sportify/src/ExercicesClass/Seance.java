@@ -1,8 +1,9 @@
 package ExercicesClass;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Seance {
+public class Seance  implements Serializable {
 
     private String nom ;
 

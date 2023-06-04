@@ -239,6 +239,43 @@ public class Utilisateur implements  Serializable{
         }
     }
 
+    public void Save() throws IOException
+    {
+        try
+        {
+            FileOutputStream fos = new FileOutputStream(System.getProperty("user.dir")+"\\src\\Sportify.txt", false);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+            oos.writeObject(nomUtilisateur);
+            oos.writeObject(prenomUtilisateur);
+            oos.writeObject(poidsUtilisateur);
+            oos.writeObject(tailleUtilisateur);
+
+            oos.writeObject(lastSeance);
+            oos.writeObject(mesRecette);
+            oos.writeObject(listeAliments);
+            oos.writeObject(listePlatsMange);
+
+            oos.writeObject(listeExercicesForce);
+            oos.writeObject(listeExercicesCardio);
+            oos.writeObject(mesSeances);
+            oos.writeObject(mesObjectifsReussis);
+            oos.writeObject(mesObjectifs);
+
+            oos.flush();
+            oos.close();
+        }
+        catch(FileNotFoundException e)
+        {
+            throw e;
+        }
+        catch(IOException e)
+        {
+            throw e;
+        }
+    }
+
+
 
     private void LogDetected(String msg)
     {
@@ -281,8 +318,7 @@ public class Utilisateur implements  Serializable{
         listeExercicesCardio = new ArrayList<ExerciceCardio>();
         mesSeances = new ArrayList<Seance>();
         mailingListLogListeners = new ArrayList<>();
-
-
+        lastSeance = new Seance();
 
 
         //Test Romain

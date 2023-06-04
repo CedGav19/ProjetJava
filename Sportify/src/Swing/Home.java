@@ -95,6 +95,23 @@ public class Home extends JFrame implements ActionListener {
 
         AjoutPlatMannge.addActionListener(this);
         enleverplatbutton.addActionListener(this);
+
+
+
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                try {
+                    Utilisateur.getInstance().Save();
+                } catch (IOException e) {
+                        throw new RuntimeException(e);
+                }
+                dispose(); // Ferme la fenêtre
+                System.exit(0); // Termine l'application
+
+            }
+        });
+
     }
 
     private void changerenfait(){
@@ -200,7 +217,7 @@ public class Home extends JFrame implements ActionListener {
     }
 
     private void lastSeance(){
-        NomDeSeance.setText(Utilisateur.getInstance().getLastSeance().getNom().toString());
+        NomDeSeance.setText(Utilisateur.getInstance().getLastSeance().getNom());
         Duree.setText("Durée: " + Utilisateur.getInstance().getLastSeance().tempsTotal());
 
     }
@@ -239,6 +256,8 @@ public class Home extends JFrame implements ActionListener {
         this.getContentPane().repaint();
         this.getContentPane().revalidate();
     }
+
+
 
 
 }

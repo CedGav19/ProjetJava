@@ -1,9 +1,10 @@
 package Aliment;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Recette {
+public class Recette  implements Serializable {
 
     private String nom ;
      private ArrayList<Aliments> vecAliments ;

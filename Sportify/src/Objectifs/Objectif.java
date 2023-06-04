@@ -1,6 +1,8 @@
 package Objectifs;
 
-public  abstract class Objectif {
+import java.io.Serializable;
+
+public  abstract class Objectif  implements Serializable {
     //private boolean accompli ;     on fait 2 vecteur dans notre singleton un accompli et l'autre en cours
     private String dateSouhaite ;
 

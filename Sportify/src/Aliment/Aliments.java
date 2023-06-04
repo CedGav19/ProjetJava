@@ -1,6 +1,8 @@
 package Aliment;
 
-public class Aliments {
+import java.io.Serializable;
+
+public class Aliments implements Serializable {
 
     private int kcal ;
     private float proteine ;
