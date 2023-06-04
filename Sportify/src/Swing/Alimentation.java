@@ -213,7 +213,7 @@ public class Alimentation extends JFrame  implements ActionListener{
         if(e.getSource() instanceof JMenuItem)changementdepage((JMenuItem) e.getSource());
 
 
-       repaint();
-       revalidate();
+       this.getContentPane().repaint();
+     this.getContentPane().revalidate();
     }
 }
