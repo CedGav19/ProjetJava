@@ -32,7 +32,6 @@ public class Home extends JFrame implements ActionListener {
         /*mise en place du dossier log a partir de la technologie JavaBean */
         LogBean Lb = new LogBean();
 
-
         setContentPane(contentPane);
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -46,30 +45,16 @@ public class Home extends JFrame implements ActionListener {
             menu.addActionListener(this);
         }
 
-        float prottot = 0;
-        float kcaltot = 0;
-
         //Partie sur les plats mangé
         JPanel panelmange = new JPanel();
         panelmange.setLayout(new GridLayout(0,1));
         for( int i = 0 ; i < Utilisateur.getInstance().getListePlatsMange().size() ; i++)
         {
             panelmange.add(new JCheckBox(Utilisateur.getInstance().getListePlatsMange().get(i).toString()));
-            //Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments()
-            for(int j = 0 ; j < Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().size(); j++)
-            {
-                prottot += Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().get(j).getProteine();
-                kcaltot += Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().get(j).getKcal();
-            }
         }
         repasmangé.setViewportView(panelmange);
 
-        float protsouhaite = Utilisateur.getInstance().getPoidsUtilisateur()*3/2;
-
-        float kcalSouhaite = 2000 + 5 * Utilisateur.getInstance().getTailleUtilisateur();
-
-        progressBarProt.setValue((int)(prottot/protsouhaite*100));
-        progressBarCal.setValue((int)(kcaltot/kcalSouhaite*100));
+        setPrgogressbar();
 
         //Partie sur les objectifs souhaité
         JPanel panelObjectifArealiser = new JPanel();
@@ -92,6 +77,7 @@ public class Home extends JFrame implements ActionListener {
         pasFaitButton.addActionListener(this);
 
         AjoutPlatMannge.addActionListener(this);
+        enleverplatbutton.addActionListener(this);
     }
 
     private void changerenfait(){
@@ -149,27 +135,12 @@ public class Home extends JFrame implements ActionListener {
     }
 
     private void ajoutPlat(){
-        float protsouhaite = Utilisateur.getInstance().getPoidsUtilisateur()*3/2;
-        float kcalSouhaite = 2000 + 5 * Utilisateur.getInstance().getTailleUtilisateur();
-        float prottot =0;
-        float kcaltot = 0;
-
         int tmp = Utilisateur.getInstance().getListePlatsMange().size();
         PopAjoutPlatMange PAA= new PopAjoutPlatMange();
         if(tmp<Utilisateur.getInstance().getListePlatsMange().size())
         {
             JPanel tmpPanel = (JPanel)repasmangé.getViewport().getView() ;
             tmpPanel.add(new JCheckBox(Utilisateur.getInstance().getListePlatsMange().get(tmp).toString()));
-
-            for(int j = 0 ; j < Utilisateur.getInstance().getListePlatsMange().get(tmp).getVecAliments().size(); j++)
-            {
-
-                prottot += Utilisateur.getInstance().getListePlatsMange().get(tmp).getVecAliments().get(j).getProteine();
-                kcaltot += Utilisateur.getInstance().getListePlatsMange().get(tmp).getVecAliments().get(j).getKcal();
-            }
-
-            progressBarProt.setValue(progressBarProt.getValue() + (int)(prottot/protsouhaite*100));
-            progressBarCal.setValue(progressBarCal.getValue() + (int)(kcaltot/kcalSouhaite*100));
         }
     }
 
@@ -191,6 +162,24 @@ public class Home extends JFrame implements ActionListener {
                 }
             }
         }
+    }
+
+    private void setPrgogressbar(){
+        float prottot = 0;
+        float kcaltot = 0;
+        float protsouhaite = Utilisateur.getInstance().getPoidsUtilisateur()*3/2;
+        float kcalSouhaite = 2000 + 5 * Utilisateur.getInstance().getTailleUtilisateur();
+        for( int i = 0 ; i < Utilisateur.getInstance().getListePlatsMange().size() ; i++)
+        {
+            for(int j = 0 ; j < Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().size(); j++)
+            {
+                prottot += Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().get(j).getProteine();
+                kcaltot += Utilisateur.getInstance().getListePlatsMange().get(i).getVecAliments().get(j).getKcal();
+            }
+        }
+
+        progressBarProt.setValue((int)(prottot/protsouhaite*100));
+        progressBarCal.setValue((int)(kcaltot/kcalSouhaite*100));
     }
 
     private void changementdepage(JMenuItem o)
@@ -219,6 +208,8 @@ public class Home extends JFrame implements ActionListener {
 
         if(e.getSource()==AjoutPlatMannge)ajoutPlat();
         if(e.getSource()==enleverplatbutton)supprimerplat();
+
+        setPrgogressbar();
 
         if(e.getSource() instanceof JMenuItem)changementdepage((JMenuItem) e.getSource());
 
