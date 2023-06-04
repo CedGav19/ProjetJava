@@ -32,7 +32,7 @@
               <text value="Dernière séance :"/>
             </properties>
           </component>
-          <component id="1dd7c" class="javax.swing.JLabel">
+          <component id="1dd7c" class="javax.swing.JLabel" binding="NomDeSeance">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -40,7 +40,7 @@
               <text value="Nom de la séance"/>
             </properties>
           </component>
-          <component id="764f7" class="javax.swing.JLabel">
+          <component id="764f7" class="javax.swing.JLabel" binding="Durée">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -54,27 +54,7 @@
             </constraints>
             <properties/>
             <border type="none"/>
-            <children>
-              <grid id="6665a" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints/>
-                <properties/>
-                <border type="none"/>
-                <children>
-                  <scrollpane id="8b9c3">
-                    <constraints>
-                      <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <horizontalScrollBarPolicy value="31"/>
-                      <verticalScrollBarPolicy value="22"/>
-                    </properties>
-                    <border type="none"/>
-                    <children/>
-                  </scrollpane>
-                </children>
-              </grid>
-            </children>
+            <children/>
           </scrollpane>
           <component id="ed703" class="javax.swing.JButton" binding="ajouterSéanceButton" default-binding="true">
             <constraints>
@@ -108,7 +88,7 @@
               <text value="Repas du jour :"/>
             </properties>
           </component>
-          <component id="f9da9" class="javax.swing.JProgressBar" binding="progressBar1" default-binding="true">
+          <component id="f9da9" class="javax.swing.JProgressBar" binding="progressBarProt">
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -136,7 +116,7 @@
               <text value="Calories :"/>
             </properties>
           </component>
-          <component id="5d765" class="javax.swing.JProgressBar" binding="progressBar2" default-binding="true">
+          <component id="5d765" class="javax.swing.JProgressBar" binding="progressBarCal">
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -147,7 +127,7 @@
               <value value="45"/>
             </properties>
           </component>
-          <scrollpane id="9d069">
+          <scrollpane id="9d069" binding="repasmangé">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -156,112 +136,14 @@
               <verticalScrollBarPolicy value="22"/>
             </properties>
             <border type="none"/>
-            <children>
-              <component id="d5829" class="javax.swing.JList" default-binding="true">
-                <constraints/>
-                <properties>
-                  <model>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                    <item value="Pomme"/>
-                    <item value="Poir"/>
-                  </model>
-                </properties>
-              </component>
-            </children>
+            <children/>
           </scrollpane>
         </children>
       </grid>
       <grid id="99f8e" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="5" left="5" bottom="5" right="5"/>
         <constraints>
-          <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <minimum-size width="200" height="400"/>
             <preferred-size width="200" height="400"/>
             <maximum-size width="200" height="400"/>

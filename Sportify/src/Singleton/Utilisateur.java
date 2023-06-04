@@ -228,6 +228,14 @@ public class Utilisateur {
         listeExercicesForce = new ArrayList<ExerciceForce>();
         listeExercicesCardio = new ArrayList<ExerciceCardio>();
         mesSeances = new ArrayList<Seance>();
+
+        /*
+        listeAliments test = new ArrayList<Aliments>();
+        Recette r = new Recette(test,"Test");
+        addPlatMange(r);
+         */
+
+
         //Test Romain
         mesObjectifs = new ArrayList<Objectif>();
         ObjectifCardio o = new ObjectifCardio("Test","Test",5);
