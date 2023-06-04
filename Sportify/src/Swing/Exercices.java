@@ -133,6 +133,24 @@ public class Exercices extends JFrame implements ActionListener {
     }
     private void onRemoveSeance(){
 
+        JPanel tmpPanel = (JPanel)ScrollPaneSeance.getViewport().getView() ;
+        for (Component c :tmpPanel.getComponents()) {
+            if (c instanceof JCheckBox) {
+                JCheckBox checkBox = (JCheckBox) c;
+                if (checkBox.isSelected()) {
+
+                    for (int i = 0 ; i<Utilisateur.getInstance().getMesSeances().size();i++)
+                    {
+                        if (checkBox.getText().equals(Utilisateur.getInstance().getMesSeances().get(i).toString()))
+                        {
+                            Utilisateur.getInstance().removeSeance(Utilisateur.getInstance().getMesSeances().get(i)); ;
+                            tmpPanel.remove(checkBox);
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
     @Override
