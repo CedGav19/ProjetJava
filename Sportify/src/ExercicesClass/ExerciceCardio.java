@@ -1,6 +1,8 @@
 package ExercicesClass;
 
-public class ExerciceCardio extends Exercice {
+import java.io.Serializable;
+
+public class ExerciceCardio extends Exercice implements Serializable {
     private int distance ;
 
     public void setDistance(int distance) {

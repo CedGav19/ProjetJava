@@ -17,7 +17,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class Utilisateur {
+public class Utilisateur implements  Serializable{
 
     //region variable
 
@@ -301,10 +301,11 @@ public class Utilisateur {
         setTailleUtilisateur(170);
         //Fin test Romain
 
+        if( listeAliments.size()==0 ) loadAlimentsCSV();
 
-        loadAlimentsCSV();
-        loadExerciceForceCsv();
-        loadExerciceCardioCsv();
+        if(listeExercicesForce.size()==0) loadExerciceForceCsv();
+
+        if(listeExercicesCardio.size()==0) loadExerciceCardioCsv();
     }
 
 

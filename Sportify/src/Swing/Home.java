@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Home extends JFrame implements ActionListener {
     private JButton faitButton;
@@ -29,8 +32,18 @@ public class Home extends JFrame implements ActionListener {
     }
 
     Home(){
-        /*mise en place du dossier log a partir de la technologie JavaBean */
+        //region mise en place du dossier log a partir de la technologie JavaBean */
         LogBean Lb = new LogBean();
+        Properties P = new Properties() ;
+        try {
+
+            P.load(new FileInputStream(System.getProperty("user.dir")+"\\src\\Sportify.properties"));
+            P.list(System.out);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        //endregion
+
 
         setContentPane(contentPane);
 
@@ -38,7 +51,9 @@ public class Home extends JFrame implements ActionListener {
         setTitle("Home");
         setSize(800,600);
 
-        Swing.Menu.Menu menubar= new Menu();
+        Menu menubar= new Menu();
+        menubar.add(new JMenu((String) P.get("Langue")));
+        menubar.add(new JMenu((String) P.get("Mesure")));
         setJMenuBar(menubar);
         for (int i = 0; i < menubar.getMenu(0).getItemCount(); i++) {
             JMenuItem menu = menubar.getMenu(0).getItem(i);
