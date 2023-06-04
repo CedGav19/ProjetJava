@@ -7,7 +7,7 @@ public class LogBean implements LogListener
 {
     public LogBean(Utilisateur u)
     {
-       // u.addLogListener(this);
+        //u.addLogListener(this);
     }
 
     public void logDetected(LogEvt e)

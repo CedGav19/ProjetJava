@@ -30,12 +30,11 @@ public class Profile extends  JFrame implements ActionListener {
 
     Profile(){
         setContentPane(contentPane);
-        setVisible(true );
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Profile");
         setSize(800,600);
-        Swing.Menu.Menu menubar= new Menu();
-        setJMenuBar(menubar);
+
 
         ChampErreur.setText("Bienvenue sur votre profil " + Utilisateur.getInstance().getNomUtilisateur().toString() + " !");
 

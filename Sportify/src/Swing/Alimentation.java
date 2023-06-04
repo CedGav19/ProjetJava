@@ -28,17 +28,15 @@ public class Alimentation extends JFrame  implements ActionListener{
     Alimentation()
     {
         setContentPane(contentPane);
-        setVisible(true );
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Alimentation");
         setSize(800,600);
 
-        Menu menubar= new Menu();
-        setJMenuBar(menubar);
-        for (int i = 0; i < menubar.getMenu(0).getItemCount(); i++) {
-            JMenuItem menu = menubar.getMenu(0).getItem(i);
-            menu.addActionListener(this);
-        }
+
+
+
+
 
        // getRootPane().setDefaultButton(ButtonAjoutAliments); designe un bouton par defaut ou le curseur se trouvera
         // parties Aliments
@@ -178,25 +176,7 @@ public class Alimentation extends JFrame  implements ActionListener{
 
     }
 
-    private void changementdepage(JMenuItem o)
-    {
 
-        setTitle(o.getText());
-        if(o.getText()=="Exercice")
-            setContentPane(new Exercices().getContentPane());
-        if(o.getText()=="Alimentation")
-        {
-            setContentPane(new Alimentation().getContentPane());
-        }
-        if(o.getText()=="Profil")
-        {
-            setContentPane(new Profile().getContentPane());
-        }
-        if(o.getText()=="Home")
-        {
-           // setContentPane(new Home().getContentPane());
-        }
-    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -210,7 +190,7 @@ public class Alimentation extends JFrame  implements ActionListener{
         if(e.getSource()==ButtonAjoutPlatMange)onAjoutPlatsMange();
         if(e.getSource()==ButtonSupPlatMange)onSupPlatsMange();
 
-        if(e.getSource() instanceof JMenuItem)changementdepage((JMenuItem) e.getSource());
+
 
 
        this.getContentPane().repaint();

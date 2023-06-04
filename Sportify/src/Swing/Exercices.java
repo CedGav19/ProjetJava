@@ -28,12 +28,11 @@ public class Exercices extends JFrame implements ActionListener {
 
     Exercices() {
         setContentPane(contentpane);
-        setVisible(true);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Exercice");
         setSize(800, 600);
-        Menu menubar= new Menu();
-        setJMenuBar(menubar);
+
 
 
         // partie exercicesForce
@@ -212,7 +211,6 @@ public class Exercices extends JFrame implements ActionListener {
         if ( e.getSource()==buttonRemoveSeance)onRemoveSeance();
         if ( e.getSource()==regarderButton)onviewseance();
 
-        this.getContentPane().repaint();
-        this.getContentPane().revalidate();
+
     }
 }
