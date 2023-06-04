@@ -226,7 +226,7 @@ public class Home extends JFrame implements ActionListener {
         derseance.setLayout(new GridLayout(0,1));
         for( int i = 0 ; i < Utilisateur.getInstance().getLastSeance().getVecExercices().size() ; i++)
         {
-            derseance.add(new JLabel(Utilisateur.getInstance().getLastSeance().getVecExercices().toString()));
+            derseance.add(new JLabel(Utilisateur.getInstance().getLastSeance().getVecExercices().get(i).toString()));
         }
         dernSeancescroll.setViewportView(derseance);
     }
