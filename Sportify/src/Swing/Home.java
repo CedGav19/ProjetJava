@@ -32,7 +32,7 @@ public class Home extends JFrame implements ActionListener {
         P.setVisible(true);
     }
 
-    Home(){
+   public Home(){
         //region mise en place du dossier log a partir de la technologie JavaBean */
         LogBean Lb = new LogBean();
         Properties P = new Properties() ;
