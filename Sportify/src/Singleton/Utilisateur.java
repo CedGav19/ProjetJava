@@ -355,21 +355,17 @@ public class Utilisateur implements  Serializable{
         lastSeance = new Seance();
 
 
-        //Test Romain
-        mesObjectifs = new ArrayList<Objectif>();
-        ObjectifCardio o = new ObjectifCardio("Test","Test",5);
-        ajouterObjectif(o);
-        ObjectifCardio o1 = new ObjectifCardio("TestA","TestA",6);
-        ajouterObjectif(o1);
-        mesObjectifsReussis = new ArrayList<Objectif>();
-        ObjectifCardio o3 = new ObjectifCardio("TestA","TestA",6);
-        ajouterObjectifReussis(o3);
 
-        setNomUtilisateur("Inconnu");
-        setPrenomUtilisateur("Inconnu");
-        setPoidsUtilisateur(60);
-        setTailleUtilisateur(170);
-        //Fin test Romain
+        mesObjectifs = new ArrayList<Objectif>();
+
+        mesObjectifsReussis = new ArrayList<Objectif>();
+
+
+        setNomUtilisateur("John");
+        setPrenomUtilisateur("Smith");
+        setPoidsUtilisateur(75);
+        setTailleUtilisateur(175);
+
         try {
             Load();
         } catch (IOException e) {
