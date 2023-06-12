@@ -243,9 +243,9 @@ public class Home extends JFrame implements ActionListener {
     private void changementdepage(JMenuItem o)
     {
         setTitle(o.getText());
-        if(o.getText()=="Exercice")
+        if(o.getText()=="Exercise")
             setContentPane(new Exercices().getContentPane());
-        if(o.getText()=="Alimentation")
+        if(o.getText()=="Food")
         {
             setContentPane(new Alimentation().getContentPane());
         }
