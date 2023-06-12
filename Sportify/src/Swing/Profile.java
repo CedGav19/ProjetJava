@@ -23,8 +23,6 @@ public class Profile extends  JFrame implements ActionListener {
     private JButton butonmoinsobjfait;
     private JScrollPane ScrollPanelObjAreal;
     private JScrollPane ScrolpanelOjectifRealise;
-    private JPanel image;
-    private JLabel labelimage;
 
     public static void main(String[] args) {
         Profile P = new Profile();

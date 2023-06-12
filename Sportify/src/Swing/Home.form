@@ -29,7 +29,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Dernière séance :"/>
+              <text value="last session"/>
             </properties>
           </component>
           <component id="1dd7c" class="javax.swing.JLabel" binding="NomDeSeance">
@@ -37,7 +37,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Nom de la séance"/>
+              <text value="session's name"/>
             </properties>
           </component>
           <component id="764f7" class="javax.swing.JLabel" binding="Duree">
@@ -45,7 +45,7 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Durée : 2 minutes"/>
+              <text value="last"/>
             </properties>
           </component>
           <scrollpane id="b8153" binding="dernSeancescroll">
@@ -62,7 +62,7 @@
             </constraints>
             <properties>
               <background color="-607633"/>
-              <text value="Ajouter séance"/>
+              <text value="+"/>
             </properties>
           </component>
         </children>
@@ -105,7 +105,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Protéine :"/>
+              <text value="Protein :"/>
             </properties>
           </component>
           <component id="6ecc6" class="javax.swing.JLabel">
@@ -144,7 +144,7 @@
             </constraints>
             <properties>
               <background color="-607633"/>
-              <text value="Ajout plat mangé"/>
+              <text value="+"/>
             </properties>
           </component>
           <component id="5a572" class="javax.swing.JButton" binding="enleverplatbutton">
@@ -153,7 +153,7 @@
             </constraints>
             <properties>
               <background color="-607633"/>
-              <text value="Enlever un plat"/>
+              <text value="-"/>
             </properties>
           </component>
         </children>
@@ -178,7 +178,7 @@
             </constraints>
             <properties>
               <background color="-607633"/>
-              <text value="Pas fait"/>
+              <text value="undo"/>
             </properties>
           </component>
           <hspacer id="3951f">
@@ -197,7 +197,7 @@
             </constraints>
             <properties>
               <background color="-607633"/>
-              <text value="Fait"/>
+              <text value="done"/>
             </properties>
           </component>
           <scrollpane id="10e5b" binding="ScrollPanelObjAreal">
@@ -213,7 +213,7 @@
               <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Objectifs à réaliser : "/>
+              <text value="goal"/>
             </properties>
           </component>
           <component id="626f6" class="javax.swing.JLabel">

@@ -193,7 +193,7 @@ public class Utilisateur implements  Serializable{
              String ligne;
              br.readLine(); // pour passer le header du fichier csv
              while ((ligne = br.readLine()) != null) {
-                 String[] proprietes = ligne.split(";");
+                 String[] proprietes = ligne.split(",");
                  Aliments aliment = new Aliments(proprietes[0],Integer.parseInt(proprietes[1]),Float.parseFloat(proprietes[2]),Integer.parseInt(proprietes[3]) ) ;
 
                listeAliments.add(aliment) ;
