@@ -220,7 +220,7 @@ public class Home extends JFrame implements ActionListener {
 
     private void lastSeance(){
         NomDeSeance.setText(Utilisateur.getInstance().getLastSeance().getNom());
-        Duree.setText("Durée: " + Utilisateur.getInstance().getLastSeance().tempsTotal() + " minutes");
+        Duree.setText("Duration: " + Utilisateur.getInstance().getLastSeance().tempsTotal() + " minutes");
 
         JPanel derseance = new JPanel();
         derseance.setLayout(new GridLayout(0,1));

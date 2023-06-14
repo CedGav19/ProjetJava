@@ -1,8 +1,5 @@
 package Objectifs;
 
-import ExercicesClass.Exercice;
-import ExercicesClass.ExerciceCardio;
-
 public class ObjectifCardio extends Objectif {
    // private ExerciceCardio ex;
 
@@ -45,7 +42,7 @@ public class ObjectifCardio extends Objectif {
 
     @Override
     public String toString() {
-        return getNom() + " ,temps: " + temps + "minutes, date :" + getDateSouhaite();
+        return getNom() + " ,time: " + temps + "minutes, date :" + getDateSouhaite();
     }
 
     @Override

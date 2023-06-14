@@ -1,7 +1,6 @@
 package Swing;
 
 import Singleton.Utilisateur;
-import Swing.Menu.Menu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -36,7 +35,7 @@ public class Profile extends  JFrame implements ActionListener {
         setSize(800,600);
 
 
-        ChampErreur.setText("Bienvenue sur votre profil " + Utilisateur.getInstance().getNomUtilisateur().toString() + " !");
+        ChampErreur.setText("Welcome " + Utilisateur.getInstance().getNomUtilisateur().toString() + " !");
 
         //Profile
         fieldPrenom.setText(Utilisateur.getInstance().getPrenomUtilisateur().toString());
@@ -178,29 +177,29 @@ public class Profile extends  JFrame implements ActionListener {
         ChampErreur.setText("");
         if(fieldNom.getText().length() < 1)
         {
-            ChampErreur.setText("Nom, ");
+            ChampErreur.setText("Name, ");
             error =1;
         }
         if(fieldPrenom.getText().length() <1)
         {
-            ChampErreur.setText(ChampErreur.getText() + "Prenom, ");
+            ChampErreur.setText(ChampErreur.getText() + "First name, ");
             error =1;
         }
         if((int)poids.getValue()<=0)
         {
-            ChampErreur.setText(ChampErreur.getText() + "Poids, ");
+            ChampErreur.setText(ChampErreur.getText() + "Weight, ");
             error =1;
         }
         if((int)taille.getValue()<=0)
         {
-            ChampErreur.setText(ChampErreur.getText() + "Taille, ");
+            ChampErreur.setText(ChampErreur.getText() + "Height, ");
             error =1;
         }
 
         Color col;
         if(error == 1)
         {
-            ChampErreur.setText(ChampErreur.getText() + "Invalide !");
+            ChampErreur.setText(ChampErreur.getText() + "Invalid !");
             col = Color.RED;
         }
         else

@@ -1,8 +1,5 @@
 package Objectifs;
 
-import ExercicesClass.Exercice;
-import ExercicesClass.ExerciceForce;
-
 public class ObjectifForce extends Objectif {
     //private ExerciceForce ex ;
     private float poids ;
@@ -42,7 +39,7 @@ public class ObjectifForce extends Objectif {
 
     @Override
     public String toString() {
-        return getNom() + " ,poids soulevé: " + poids + "kg, date :" + getDateSouhaite();
+        return getNom() + " ,weight lifted: " + poids + "kg, date :" + getDateSouhaite();
     }
 
     public static void main(String[] args) {

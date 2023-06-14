@@ -134,7 +134,7 @@
                 </constraints>
                 <properties>
                   <background color="-607633"/>
-                  <text value="Modifier"/>
+                  <text value="Edit"/>
                 </properties>
               </component>
             </children>

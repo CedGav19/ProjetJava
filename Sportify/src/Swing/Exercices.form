@@ -213,7 +213,7 @@
                         </constraints>
                         <properties>
                           <background color="-607633"/>
-                          <text value="Regarder"/>
+                          <text value="look"/>
                         </properties>
                       </component>
                     </children>
